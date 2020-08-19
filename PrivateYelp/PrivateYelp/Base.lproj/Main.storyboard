@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="zoJ-KE-ucg">
             <objects>
-                <viewController id="5GJ-P2-0Fo" sceneMemberID="viewController">
+                <viewController id="5GJ-P2-0Fo" customClass="MapViewController" customModule="PrivateYelp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zou-0X-J2Q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -18,10 +18,6 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="j6O-lq-bBq">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HMK-Py-gxD">
-                                <rect key="frame" x="20" y="792" width="40" height="40"/>
-                                <state key="normal" image="mapButtonBottomBarSelected"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uRy-Rn-UwU">
                                 <rect key="frame" x="354" y="792" width="40" height="40"/>
                                 <state key="normal" image="myReviewsButtonBottomBarUnselected"/>
@@ -29,18 +25,20 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="CdD-VD-sw6" firstAttribute="bottom" secondItem="HMK-Py-gxD" secondAttribute="bottom" constant="30" id="Hd5-wc-Kdi"/>
                             <constraint firstItem="j6O-lq-bBq" firstAttribute="leading" secondItem="CdD-VD-sw6" secondAttribute="leading" id="cwr-Dq-gJ5"/>
                             <constraint firstAttribute="bottom" secondItem="j6O-lq-bBq" secondAttribute="bottom" id="gcb-X9-nWG"/>
                             <constraint firstItem="CdD-VD-sw6" firstAttribute="trailing" secondItem="uRy-Rn-UwU" secondAttribute="trailing" constant="20" id="laj-0k-VvV"/>
                             <constraint firstItem="j6O-lq-bBq" firstAttribute="top" secondItem="Zou-0X-J2Q" secondAttribute="top" id="nGJ-fw-SbK"/>
                             <constraint firstItem="CdD-VD-sw6" firstAttribute="bottom" secondItem="uRy-Rn-UwU" secondAttribute="bottom" constant="30" id="q9d-62-kXC"/>
                             <constraint firstItem="j6O-lq-bBq" firstAttribute="trailing" secondItem="CdD-VD-sw6" secondAttribute="trailing" id="uIR-d1-xRP"/>
-                            <constraint firstItem="HMK-Py-gxD" firstAttribute="leading" secondItem="CdD-VD-sw6" secondAttribute="leading" constant="20" id="uiN-B1-rpH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CdD-VD-sw6"/>
                     </view>
                     <navigationItem key="navigationItem" id="Qjg-Uz-pFC"/>
+                    <connections>
+                        <outlet property="mapView" destination="j6O-lq-bBq" id="cJk-hh-Hl4"/>
+                        <outlet property="myReviewsButton" destination="uRy-Rn-UwU" id="Zzw-JX-mLT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yIS-Pi-WT1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -49,10 +47,10 @@
         <!--Navigation Controller-->
         <scene sceneID="eIL-Rd-ETq">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="evU-jL-NTI" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="evU-jL-NTI" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hfx-H6-aVR">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -66,7 +64,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="mapButtonBottomBarSelected" width="40" height="40"/>
         <image name="myReviewsButtonBottomBarUnselected" width="40" height="40"/>
     </resources>
 </document>
