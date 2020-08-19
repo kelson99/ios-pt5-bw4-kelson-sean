@@ -510,10 +510,10 @@
             </objects>
             <point key="canvasLocation" x="2886.9565217391305" y="141.96428571428569"/>
         </scene>
-        <!--Review What Had View Controller-->
+        <!--Review Photos View Controller-->
         <scene sceneID="YDB-oi-H2S">
             <objects>
-                <viewController id="YtC-pJ-HOg" customClass="ReviewWhatHadViewController" customModule="PrivateYelp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="YtC-pJ-HOg" customClass="ReviewPhotosViewController" customModule="PrivateYelp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KRa-aP-ci3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -567,10 +567,16 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4J3-Eq-7cR">
                                         <rect key="frame" x="-4" y="707" width="40" height="40"/>
                                         <state key="normal" image="saveLaterButton"/>
+                                        <connections>
+                                            <action selector="saveButtonTapped:" destination="YtC-pJ-HOg" eventType="touchUpInside" id="aQl-cO-Wau"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KMz-S8-pRO">
                                         <rect key="frame" x="16" y="177" width="90" height="137"/>
                                         <state key="normal" image="addPhotoEmptyStateButton"/>
+                                        <connections>
+                                            <action selector="addPhotoTapped:" destination="YtC-pJ-HOg" eventType="touchUpInside" id="JZt-WY-0Up"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -594,6 +600,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iFF-Tx-dNX">
                                 <rect key="frame" x="362" y="738" width="40" height="40"/>
                                 <state key="normal" image="nextButton"/>
+                                <connections>
+                                    <action selector="nextButtonTapped:" destination="YtC-pJ-HOg" eventType="touchUpInside" id="zeq-tU-mLW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -609,6 +618,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="j6R-3v-sPS"/>
                     </view>
+                    <connections>
+                        <outlet property="addressLabel" destination="T0v-65-FNm" id="N7J-zk-682"/>
+                        <outlet property="contentView" destination="HFq-xj-TWr" id="er4-cf-ugu"/>
+                        <outlet property="nameLabel" destination="hS6-RB-W6N" id="2Z8-ro-IRE"/>
+                        <outlet property="nextButton" destination="iFF-Tx-dNX" id="drJ-5K-Gg8"/>
+                        <outlet property="saveButton" destination="4J3-Eq-7cR" id="c4f-Sg-tWJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="znm-PV-rea" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
