@@ -13,6 +13,9 @@
 		66F7338724ECB90B009FF9C3 /* PrivateYelp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 66F7338524ECB90B009FF9C3 /* PrivateYelp.xcdatamodeld */; };
 		66F7338924ECB90C009FF9C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66F7338824ECB90C009FF9C3 /* Assets.xcassets */; };
 		66F7338C24ECB90C009FF9C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66F7338A24ECB90C009FF9C3 /* LaunchScreen.storyboard */; };
+		66F7339B24ED91DB009FF9C3 /* HKGrotesk-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 66F7339A24ED91DB009FF9C3 /* HKGrotesk-Bold.otf */; };
+		66F7339C24ED91DE009FF9C3 /* HKGrotesk-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 66F7339924ED91D0009FF9C3 /* HKGrotesk-Regular.otf */; };
+		66F7339E24ED91EA009FF9C3 /* HKGrotesk-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 66F7339D24ED91EA009FF9C3 /* HKGrotesk-SemiBold.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		66F7338824ECB90C009FF9C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66F7338B24ECB90C009FF9C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		66F7338D24ECB90C009FF9C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66F7339924ED91D0009FF9C3 /* HKGrotesk-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HKGrotesk-Regular.otf"; sourceTree = "<group>"; };
+		66F7339A24ED91DB009FF9C3 /* HKGrotesk-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HKGrotesk-Bold.otf"; sourceTree = "<group>"; };
+		66F7339D24ED91EA009FF9C3 /* HKGrotesk-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HKGrotesk-SemiBold.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,11 +66,22 @@
 				66F7337E24ECB90B009FF9C3 /* SceneDelegate.swift */,
 				66F7338224ECB90B009FF9C3 /* Main.storyboard */,
 				66F7338824ECB90C009FF9C3 /* Assets.xcassets */,
+				66F7339F24ED91F6009FF9C3 /* Fonts */,
 				66F7338A24ECB90C009FF9C3 /* LaunchScreen.storyboard */,
 				66F7338D24ECB90C009FF9C3 /* Info.plist */,
 				66F7338524ECB90B009FF9C3 /* PrivateYelp.xcdatamodeld */,
 			);
 			path = PrivateYelp;
+			sourceTree = "<group>";
+		};
+		66F7339F24ED91F6009FF9C3 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				66F7339924ED91D0009FF9C3 /* HKGrotesk-Regular.otf */,
+				66F7339A24ED91DB009FF9C3 /* HKGrotesk-Bold.otf */,
+				66F7339D24ED91EA009FF9C3 /* HKGrotesk-SemiBold.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,7 +142,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66F7339C24ED91DE009FF9C3 /* HKGrotesk-Regular.otf in Resources */,
 				66F7338C24ECB90C009FF9C3 /* LaunchScreen.storyboard in Resources */,
+				66F7339B24ED91DB009FF9C3 /* HKGrotesk-Bold.otf in Resources */,
+				66F7339E24ED91EA009FF9C3 /* HKGrotesk-SemiBold.otf in Resources */,
 				66F7338924ECB90C009FF9C3 /* Assets.xcassets in Resources */,
 				66F7338424ECB90B009FF9C3 /* Main.storyboard in Resources */,
 			);
