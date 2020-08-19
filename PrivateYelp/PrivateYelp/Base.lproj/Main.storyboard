@@ -631,10 +631,10 @@
             </objects>
             <point key="canvasLocation" x="3600" y="142"/>
         </scene>
-        <!--Review Photos View Controller-->
+        <!--Review Notes View Controller-->
         <scene sceneID="TPx-VE-2fr">
             <objects>
-                <viewController id="5w9-D8-DRR" customClass="ReviewPhotosViewController" customModule="PrivateYelp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="5w9-D8-DRR" customClass="ReviewNotesViewController" customModule="PrivateYelp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8F6-zT-k6S">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -688,6 +688,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xZD-sb-PDV">
                                         <rect key="frame" x="-4" y="717" width="40" height="40"/>
                                         <state key="normal" image="saveLaterButton"/>
+                                        <connections>
+                                            <action selector="saveButtonTapped:" destination="5w9-D8-DRR" eventType="touchUpInside" id="vxZ-j1-g2E"/>
+                                        </connections>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Write notes here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Yik-ZB-W80">
                                         <rect key="frame" x="16" y="171" width="351" height="526"/>
@@ -720,6 +723,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TgU-fU-KJJ">
                                 <rect key="frame" x="362" y="792" width="40" height="40"/>
                                 <state key="normal" image="nextButton"/>
+                                <connections>
+                                    <action selector="nextButtonTapped:" destination="5w9-D8-DRR" eventType="touchUpInside" id="9FK-K3-C4L"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -735,6 +741,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oPZ-ad-dPJ"/>
                     </view>
+                    <connections>
+                        <outlet property="addressLabel" destination="BmJ-Uy-bO7" id="DoF-J2-ZiT"/>
+                        <outlet property="contentView" destination="b5g-Xv-Vxl" id="5Ei-Wt-OOa"/>
+                        <outlet property="nameLabel" destination="vZD-6E-9Yu" id="aeR-HB-d9z"/>
+                        <outlet property="nextButton" destination="TgU-fU-KJJ" id="XFA-Ty-gd2"/>
+                        <outlet property="saveButton" destination="xZD-sb-PDV" id="S9L-B4-zcl"/>
+                        <outlet property="textView" destination="Yik-ZB-W80" id="Csp-SL-0c3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L2t-na-yvt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
