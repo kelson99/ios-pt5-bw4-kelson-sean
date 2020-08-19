@@ -370,10 +370,10 @@
             </objects>
             <point key="canvasLocation" x="371.01449275362324" y="137.94642857142856"/>
         </scene>
-        <!--Review Rating Checklist View Controller-->
+        <!--Review What Had View Controller-->
         <scene sceneID="1A1-1G-YuO">
             <objects>
-                <viewController id="qHK-Ie-ndY" customClass="ReviewRatingChecklistViewController" customModule="PrivateYelp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="qHK-Ie-ndY" customClass="ReviewWhatHadViewController" customModule="PrivateYelp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L9h-OU-Gkv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -428,7 +428,7 @@
                                         <rect key="frame" x="-4" y="717" width="40" height="40"/>
                                         <state key="normal" image="saveLaterButton"/>
                                         <connections>
-                                            <action selector="saveButtonTapped:" destination="qHK-Ie-ndY" eventType="touchUpInside" id="rrU-fF-e7L"/>
+                                            <action selector="saveButtonTapped:" destination="qHK-Ie-ndY" eventType="touchUpInside" id="kZW-qM-He1"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nKj-QY-VKO">
@@ -478,7 +478,7 @@
                                 <rect key="frame" x="362" y="792" width="40" height="40"/>
                                 <state key="normal" image="nextButton"/>
                                 <connections>
-                                    <action selector="nextButtonTapped:" destination="qHK-Ie-ndY" eventType="touchUpInside" id="qFu-4j-26P"/>
+                                    <action selector="nextButtonTapped:" destination="qHK-Ie-ndY" eventType="touchUpInside" id="ps2-5j-lJt"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -496,11 +496,13 @@
                         <viewLayoutGuide key="safeArea" id="w2Z-zO-Bpu"/>
                     </view>
                     <connections>
-                        <outlet property="addressLabel" destination="9bH-rA-lWn" id="cPx-1s-wZD"/>
-                        <outlet property="contentView" destination="0A4-oY-SC6" id="Xpe-rn-ldu"/>
-                        <outlet property="nameLabel" destination="hVp-Is-ozt" id="Vu4-2Y-FAp"/>
-                        <outlet property="nextButton" destination="NA1-xV-jLT" id="avF-Fq-Nwh"/>
-                        <outlet property="saveButton" destination="s7h-tw-aYl" id="NuP-vC-aXu"/>
+                        <outlet property="addressLabel" destination="9bH-rA-lWn" id="aCz-Ph-0N9"/>
+                        <outlet property="contentView" destination="0A4-oY-SC6" id="9Im-Mf-cYh"/>
+                        <outlet property="dividerLine" destination="dR4-ra-Dlo" id="zLh-Gv-cmz"/>
+                        <outlet property="nameLabel" destination="hVp-Is-ozt" id="zZj-wq-8oh"/>
+                        <outlet property="newItemTextField" destination="eyF-rx-DTs" id="esB-LV-XRn"/>
+                        <outlet property="nextButton" destination="NA1-xV-jLT" id="nYR-8W-3Yo"/>
+                        <outlet property="saveButton" destination="s7h-tw-aYl" id="WVC-01-KEC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eru-9P-IsX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
