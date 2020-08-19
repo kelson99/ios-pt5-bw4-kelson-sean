@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		66F7337D24ECB90B009FF9C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F7337C24ECB90B009FF9C3 /* AppDelegate.swift */; };
 		66F7337F24ECB90B009FF9C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F7337E24ECB90B009FF9C3 /* SceneDelegate.swift */; };
-		66F7338124ECB90B009FF9C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F7338024ECB90B009FF9C3 /* ViewController.swift */; };
 		66F7338424ECB90B009FF9C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66F7338224ECB90B009FF9C3 /* Main.storyboard */; };
 		66F7338724ECB90B009FF9C3 /* PrivateYelp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 66F7338524ECB90B009FF9C3 /* PrivateYelp.xcdatamodeld */; };
 		66F7338924ECB90C009FF9C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66F7338824ECB90C009FF9C3 /* Assets.xcassets */; };
@@ -20,7 +19,6 @@
 		66F7337924ECB90B009FF9C3 /* PrivateYelp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrivateYelp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66F7337C24ECB90B009FF9C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66F7337E24ECB90B009FF9C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		66F7338024ECB90B009FF9C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		66F7338324ECB90B009FF9C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		66F7338624ECB90B009FF9C3 /* PrivateYelp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PrivateYelp.xcdatamodel; sourceTree = "<group>"; };
 		66F7338824ECB90C009FF9C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,7 +58,6 @@
 			children = (
 				66F7337C24ECB90B009FF9C3 /* AppDelegate.swift */,
 				66F7337E24ECB90B009FF9C3 /* SceneDelegate.swift */,
-				66F7338024ECB90B009FF9C3 /* ViewController.swift */,
 				66F7338224ECB90B009FF9C3 /* Main.storyboard */,
 				66F7338824ECB90C009FF9C3 /* Assets.xcassets */,
 				66F7338A24ECB90C009FF9C3 /* LaunchScreen.storyboard */,
@@ -141,7 +138,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66F7338124ECB90B009FF9C3 /* ViewController.swift in Sources */,
 				66F7338724ECB90B009FF9C3 /* PrivateYelp.xcdatamodeld in Sources */,
 				66F7337D24ECB90B009FF9C3 /* AppDelegate.swift in Sources */,
 				66F7337F24ECB90B009FF9C3 /* SceneDelegate.swift in Sources */,
@@ -289,7 +285,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 64HJH4K2FC;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = PrivateYelp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -307,7 +303,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 64HJH4K2FC;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = PrivateYelp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
