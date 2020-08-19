@@ -479,7 +479,7 @@
                                 <state key="normal" image="nextButton"/>
                                 <connections>
                                     <action selector="nextButtonTapped:" destination="qHK-Ie-ndY" eventType="touchUpInside" id="ps2-5j-lJt"/>
-                                    <segue destination="YtC-pJ-HOg" kind="presentation" id="3Qs-vP-BXD"/>
+                                    <segue destination="YtC-pJ-HOg" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="3Qs-vP-BXD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -515,11 +515,11 @@
             <objects>
                 <viewController id="YtC-pJ-HOg" customClass="ReviewPhotosViewController" customModule="PrivateYelp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KRa-aP-ci3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HFq-xj-TWr">
-                                <rect key="frame" x="16" y="31" width="383" height="732"/>
+                                <rect key="frame" x="16" y="75" width="383" height="742"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="-4" translatesAutoresizingMaskIntoConstraints="NO" id="vtr-xN-psY">
                                         <rect key="frame" x="16" y="24" width="351" height="67"/>
@@ -565,7 +565,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4J3-Eq-7cR">
-                                        <rect key="frame" x="-4" y="707" width="40" height="40"/>
+                                        <rect key="frame" x="-4" y="717" width="40" height="40"/>
                                         <state key="normal" image="saveLaterButton"/>
                                         <connections>
                                             <action selector="saveButtonTapped:" destination="YtC-pJ-HOg" eventType="touchUpInside" id="aQl-cO-Wau"/>
@@ -598,11 +598,11 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iFF-Tx-dNX">
-                                <rect key="frame" x="362" y="738" width="40" height="40"/>
+                                <rect key="frame" x="362" y="792" width="40" height="40"/>
                                 <state key="normal" image="nextButton"/>
                                 <connections>
                                     <action selector="nextButtonTapped:" destination="YtC-pJ-HOg" eventType="touchUpInside" id="zeq-tU-mLW"/>
-                                    <segue destination="5w9-D8-DRR" kind="presentation" modalPresentationStyle="fullScreen" id="qdg-Pe-HXT"/>
+                                    <segue destination="5w9-D8-DRR" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="qdg-Pe-HXT"/>
                                 </connections>
                             </button>
                         </subviews>
