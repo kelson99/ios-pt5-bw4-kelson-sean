@@ -61,10 +61,10 @@
             </objects>
             <point key="canvasLocation" x="1281.1594202898552" y="137.94642857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Review Rating Checklist View Controller-->
         <scene sceneID="ajl-Z1-goN">
             <objects>
-                <viewController id="hPo-ha-Ng0" sceneMemberID="viewController">
+                <viewController id="hPo-ha-Ng0" customClass="ReviewRatingChecklistViewController" customModule="PrivateYelp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xOh-bm-1dU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -144,22 +144,37 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acS-Zq-xj1">
                                                         <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
                                                         <state key="normal" image="starButtonUnselected"/>
+                                                        <connections>
+                                                            <action selector="oneStarTapped:" destination="hPo-ha-Ng0" eventType="touchUpInside" id="9LH-16-GZ8"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XP3-V1-Eid">
                                                         <rect key="frame" x="24" y="0.0" width="24" height="24"/>
                                                         <state key="normal" image="starButtonUnselected"/>
+                                                        <connections>
+                                                            <action selector="twoStarTapped:" destination="hPo-ha-Ng0" eventType="touchUpInside" id="LcW-DV-xGM"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IbE-8g-1R4">
                                                         <rect key="frame" x="48" y="0.0" width="24" height="24"/>
                                                         <state key="normal" image="starButtonUnselected"/>
+                                                        <connections>
+                                                            <action selector="threeStarTapped:" destination="hPo-ha-Ng0" eventType="touchUpInside" id="RLd-vi-1iY"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RV2-2N-2pj">
                                                         <rect key="frame" x="72" y="0.0" width="24" height="24"/>
                                                         <state key="normal" image="starButtonUnselected"/>
+                                                        <connections>
+                                                            <action selector="fourStarTapped:" destination="hPo-ha-Ng0" eventType="touchUpInside" id="bGj-Gr-lLq"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4UB-xv-nZW">
                                                         <rect key="frame" x="96" y="0.0" width="24" height="24"/>
                                                         <state key="normal" image="starButtonUnselected"/>
+                                                        <connections>
+                                                            <action selector="fiveStarTapped:" destination="hPo-ha-Ng0" eventType="touchUpInside" id="Hsq-oN-f8E"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -174,6 +189,9 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uSx-pM-IgK">
                                                         <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
                                                         <state key="normal" image="checklistButtonUnselected"/>
+                                                        <connections>
+                                                            <action selector="noKidsTapped:" destination="hPo-ha-Ng0" eventType="touchUpInside" id="CaU-GS-Nj2"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Kids" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NUr-JI-cf4">
                                                         <rect key="frame" x="32" y="0.0" width="62.5" height="24"/>
@@ -189,6 +207,9 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8dr-LM-rqq">
                                                         <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
                                                         <state key="normal" image="checklistButtonUnselected"/>
+                                                        <connections>
+                                                            <action selector="goodForDatesTapped:" destination="hPo-ha-Ng0" eventType="touchUpInside" id="g2P-Y8-cMK"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good for Dates" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xd1-uH-118">
                                                         <rect key="frame" x="32" y="0.0" width="123" height="24"/>
@@ -204,6 +225,9 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vgV-h1-8c1">
                                                         <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
                                                         <state key="normal" image="checklistButtonUnselected"/>
+                                                        <connections>
+                                                            <action selector="smallSpaceTapped:" destination="hPo-ha-Ng0" eventType="touchUpInside" id="8g3-Qa-UAM"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Small Space" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJq-2X-9XM">
                                                         <rect key="frame" x="32" y="0.0" width="98" height="24"/>
@@ -219,6 +243,9 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVo-Wz-Z4Q">
                                                         <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
                                                         <state key="normal" image="checklistButtonUnselected"/>
+                                                        <connections>
+                                                            <action selector="dirtyBathroomsTapped:" destination="hPo-ha-Ng0" eventType="touchUpInside" id="6FF-xA-WM8"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dirty Bathrooms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nr7-5q-4bb">
                                                         <rect key="frame" x="32" y="0.0" width="132.5" height="24"/>
@@ -234,6 +261,9 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHH-S7-wrV">
                                                         <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
                                                         <state key="normal" image="checklistButtonUnselected"/>
+                                                        <connections>
+                                                            <action selector="fineDiningTapped:" destination="hPo-ha-Ng0" eventType="touchUpInside" id="M8P-aF-6kn"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fine Dining" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3jf-jc-fxK">
                                                         <rect key="frame" x="32" y="0.0" width="89" height="24"/>
@@ -245,12 +275,20 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Idu-PR-FMW">
+                                        <rect key="frame" x="-5" y="717" width="40" height="40"/>
+                                        <state key="normal" image="saveLaterButton"/>
+                                        <connections>
+                                            <action selector="saveButtonTapped:" destination="hPo-ha-Ng0" eventType="touchUpInside" id="TQL-a8-HKU"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstItem="4E4-Vr-QQM" firstAttribute="top" secondItem="Shr-45-fnH" secondAttribute="bottom" constant="32" id="6PC-Rd-fWP"/>
                                     <constraint firstItem="FrV-5k-Qdi" firstAttribute="top" secondItem="4E4-Vr-QQM" secondAttribute="bottom" constant="14" id="711-Mj-i9m"/>
                                     <constraint firstAttribute="trailing" secondItem="FrV-5k-Qdi" secondAttribute="trailing" constant="16" id="Bff-UD-eEx"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="Idu-PR-FMW" secondAttribute="bottom" constant="-23" id="EA8-Nf-E8m"/>
                                     <constraint firstItem="Onf-2m-3md" firstAttribute="leading" secondItem="ySv-KQ-uh2" secondAttribute="leading" constant="16" id="IeP-gk-zhE"/>
                                     <constraint firstItem="FrV-5k-Qdi" firstAttribute="leading" secondItem="ySv-KQ-uh2" secondAttribute="leading" constant="28" id="Pmf-Cv-Egs"/>
                                     <constraint firstAttribute="trailing" secondItem="WC8-31-vnB" secondAttribute="trailing" constant="16" id="Pw1-vc-ziP"/>
@@ -271,13 +309,12 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Idu-PR-FMW">
-                                <rect key="frame" x="12" y="792" width="40" height="40"/>
-                                <state key="normal" image="saveLaterButton"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTD-T4-Ht9">
                                 <rect key="frame" x="362" y="792" width="40" height="40"/>
                                 <state key="normal" image="nextButton"/>
+                                <connections>
+                                    <action selector="nextButtonTapped:" destination="hPo-ha-Ng0" eventType="touchUpInside" id="7oz-dt-bBN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -285,14 +322,29 @@
                             <constraint firstItem="ySv-KQ-uh2" firstAttribute="top" secondItem="cfg-Ai-SdD" secondAttribute="top" constant="31" id="6wi-sL-iD0"/>
                             <constraint firstItem="cfg-Ai-SdD" firstAttribute="bottom" secondItem="ySv-KQ-uh2" secondAttribute="bottom" constant="45" id="IQN-c3-oCb"/>
                             <constraint firstItem="cfg-Ai-SdD" firstAttribute="trailing" secondItem="gTD-T4-Ht9" secondAttribute="trailing" constant="12" id="Ieh-fc-ZY9"/>
-                            <constraint firstItem="Idu-PR-FMW" firstAttribute="leading" secondItem="cfg-Ai-SdD" secondAttribute="leading" constant="12" id="Jgd-dh-hZm"/>
                             <constraint firstItem="ySv-KQ-uh2" firstAttribute="leading" secondItem="cfg-Ai-SdD" secondAttribute="leading" constant="16" id="LP5-ue-QFp"/>
                             <constraint firstItem="cfg-Ai-SdD" firstAttribute="bottom" secondItem="gTD-T4-Ht9" secondAttribute="bottom" constant="30" id="WfR-e4-UCP"/>
                             <constraint firstItem="cfg-Ai-SdD" firstAttribute="trailing" secondItem="ySv-KQ-uh2" secondAttribute="trailing" constant="15" id="bdb-QR-qFD"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="Idu-PR-FMW" secondAttribute="bottom" constant="30" id="yx8-KM-Vhk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cfg-Ai-SdD"/>
                     </view>
+                    <connections>
+                        <outlet property="addressLabel" destination="un0-Rw-7la" id="QIz-rU-b86"/>
+                        <outlet property="contentView" destination="ySv-KQ-uh2" id="5Fx-Ht-2tP"/>
+                        <outlet property="dirtyBathroomsButton" destination="HVo-Wz-Z4Q" id="fad-aq-R7h"/>
+                        <outlet property="fineDiningButton" destination="aHH-S7-wrV" id="wjS-53-6M5"/>
+                        <outlet property="fiveStarButton" destination="4UB-xv-nZW" id="BMq-Ke-HZe"/>
+                        <outlet property="fourStarButton" destination="RV2-2N-2pj" id="fur-4U-6f7"/>
+                        <outlet property="goodForDatesButton" destination="8dr-LM-rqq" id="Fzg-jT-ZMb"/>
+                        <outlet property="nameLabel" destination="PdL-bI-lOI" id="zNz-OD-Sb7"/>
+                        <outlet property="nextButton" destination="gTD-T4-Ht9" id="iew-dj-MEj"/>
+                        <outlet property="noKidsButton" destination="uSx-pM-IgK" id="rma-Eb-fLJ"/>
+                        <outlet property="oneStarButton" destination="acS-Zq-xj1" id="tW3-b5-lQo"/>
+                        <outlet property="saveButton" destination="Idu-PR-FMW" id="8Oi-UH-oDJ"/>
+                        <outlet property="smallSpaceButton" destination="vgV-h1-8c1" id="ZKj-aC-Jqe"/>
+                        <outlet property="threeStarButton" destination="IbE-8g-1R4" id="gKH-Ww-BIT"/>
+                        <outlet property="twoStarButton" destination="XP3-V1-Eid" id="6W7-jG-90O"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c0r-cQ-sTF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
