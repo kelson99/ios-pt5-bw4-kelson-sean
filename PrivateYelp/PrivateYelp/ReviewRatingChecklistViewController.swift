@@ -10,13 +10,98 @@ import UIKit
 
 class ReviewRatingChecklistViewController: UIViewController {
 
+    @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var oneStarButton: UIButton!
+    @IBOutlet weak var twoStarButton: UIButton!
+    @IBOutlet weak var threeStarButton: UIButton!
+    @IBOutlet weak var fourStarButton: UIButton!
+    @IBOutlet weak var fiveStarButton: UIButton!
+    @IBOutlet weak var noKidsButton: UIButton!
+    @IBOutlet weak var goodForDatesButton: UIButton!
+    @IBOutlet weak var smallSpaceButton: UIButton!
+    @IBOutlet weak var dirtyBathroomsButton: UIButton!
+    @IBOutlet weak var fineDiningButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setUpViews()
     }
     
-
+    
+    private func setUpViews() {
+        
+        let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.regular)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = view.bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        view.insertSubview(blurEffectView, at: 0)
+        
+        // Set up next button shadows
+        nextButton.layer.shadowColor = UIColor.black.cgColor
+        nextButton.layer.shadowOpacity = 0.25
+        nextButton.layer.shadowRadius = 5
+        nextButton.layer.shadowOffset = CGSize(width: 0, height: 4)
+        nextButton.layer.masksToBounds = false
+        
+        // Set up save button shadows
+        saveButton.layer.shadowColor = UIColor.black.cgColor
+        saveButton.layer.shadowOpacity = 0.25
+        saveButton.layer.shadowRadius = 5
+        saveButton.layer.shadowOffset = CGSize(width: 0, height: 4)
+        saveButton.layer.masksToBounds = false
+        
+        // Set up contentView appearance
+        contentView.layer.cornerRadius = 15.0
+        contentView.layer.shadowColor = UIColor.black.cgColor
+        contentView.layer.shadowOpacity = 0.25
+        contentView.layer.shadowRadius = 5
+        contentView.layer.shadowOffset = CGSize(width: 0, height: 4)
+        contentView.layer.masksToBounds = false
+    }
+    
+    @IBAction func oneStarTapped(_ sender: Any) {
+    }
+    
+    @IBAction func twoStarTapped(_ sender: Any) {
+    }
+    
+    @IBAction func threeStarTapped(_ sender: Any) {
+    }
+    
+    @IBAction func fourStarTapped(_ sender: Any) {
+    }
+    
+    @IBAction func fiveStarTapped(_ sender: Any) {
+    }
+    
+    @IBAction func noKidsTapped(_ sender: Any) {
+    }
+    
+    @IBAction func goodForDatesTapped(_ sender: Any) {
+    }
+    
+    @IBAction func smallSpaceTapped(_ sender: Any) {
+    }
+    
+    @IBAction func dirtyBathroomsTapped(_ sender: Any) {
+    }
+    
+    @IBAction func fineDiningTapped(_ sender: Any) {
+    }
+    
+    @IBAction func saveButtonTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func nextButtonTapped(_ sender: Any) {
+    }
+    
     /*
     // MARK: - Navigation
 
