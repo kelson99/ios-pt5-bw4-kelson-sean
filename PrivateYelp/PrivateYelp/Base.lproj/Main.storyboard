@@ -78,7 +78,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PdL-bI-lOI">
                                                 <rect key="frame" x="0.0" y="0.0" width="279" height="47"/>
                                                 <fontDescription key="fontDescription" name="HKGrotesk-Bold" family="HK Grotesk" pointSize="36"/>
-                                                <color key="textColor" red="0.34901960784313724" green="0.29411764705882354" blue="0.78431372549019607" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.34901960784313724" green="0.29411764705882354" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Tbb-pn-9mm">
@@ -110,7 +110,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tom-1l-5P1">
                                                 <rect key="frame" x="45" y="0.0" width="306" height="40"/>
                                                 <fontDescription key="fontDescription" name="HKGrotesk-Bold" family="HK Grotesk" pointSize="24"/>
-                                                <color key="textColor" red="0.34901960780000002" green="0.29411764709999999" blue="0.7843137255" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.34901960780000002" green="0.29411764709999999" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -124,7 +124,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Checklist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBe-hV-7Ek">
                                                 <rect key="frame" x="45" y="0.0" width="306" height="40"/>
                                                 <fontDescription key="fontDescription" name="HKGrotesk-Bold" family="HK Grotesk" pointSize="24"/>
-                                                <color key="textColor" red="0.34901960780000002" green="0.29411764709999999" blue="0.7843137255" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.34901960780000002" green="0.29411764709999999" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -275,8 +275,8 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Idu-PR-FMW">
-                                        <rect key="frame" x="-5" y="717" width="40" height="40"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Idu-PR-FMW">
+                                        <rect key="frame" x="-4" y="717" width="40" height="40"/>
                                         <state key="normal" image="saveLaterButton"/>
                                         <connections>
                                             <action selector="saveButtonTapped:" destination="hPo-ha-Ng0" eventType="touchUpInside" id="TQL-a8-HKU"/>
@@ -288,7 +288,6 @@
                                     <constraint firstItem="4E4-Vr-QQM" firstAttribute="top" secondItem="Shr-45-fnH" secondAttribute="bottom" constant="32" id="6PC-Rd-fWP"/>
                                     <constraint firstItem="FrV-5k-Qdi" firstAttribute="top" secondItem="4E4-Vr-QQM" secondAttribute="bottom" constant="14" id="711-Mj-i9m"/>
                                     <constraint firstAttribute="trailing" secondItem="FrV-5k-Qdi" secondAttribute="trailing" constant="16" id="Bff-UD-eEx"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="Idu-PR-FMW" secondAttribute="bottom" constant="-23" id="EA8-Nf-E8m"/>
                                     <constraint firstItem="Onf-2m-3md" firstAttribute="leading" secondItem="ySv-KQ-uh2" secondAttribute="leading" constant="16" id="IeP-gk-zhE"/>
                                     <constraint firstItem="FrV-5k-Qdi" firstAttribute="leading" secondItem="ySv-KQ-uh2" secondAttribute="leading" constant="28" id="Pmf-Cv-Egs"/>
                                     <constraint firstAttribute="trailing" secondItem="WC8-31-vnB" secondAttribute="trailing" constant="16" id="Pw1-vc-ziP"/>
@@ -314,16 +313,19 @@
                                 <state key="normal" image="nextButton"/>
                                 <connections>
                                     <action selector="nextButtonTapped:" destination="hPo-ha-Ng0" eventType="touchUpInside" id="7oz-dt-bBN"/>
+                                    <segue destination="qHK-Ie-ndY" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="E8M-6E-aBK"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ySv-KQ-uh2" firstAttribute="top" secondItem="cfg-Ai-SdD" secondAttribute="top" constant="31" id="6wi-sL-iD0"/>
+                            <constraint firstItem="cfg-Ai-SdD" firstAttribute="bottom" secondItem="Idu-PR-FMW" secondAttribute="bottom" constant="30" id="FN5-Mm-ORN"/>
                             <constraint firstItem="cfg-Ai-SdD" firstAttribute="bottom" secondItem="ySv-KQ-uh2" secondAttribute="bottom" constant="45" id="IQN-c3-oCb"/>
                             <constraint firstItem="cfg-Ai-SdD" firstAttribute="trailing" secondItem="gTD-T4-Ht9" secondAttribute="trailing" constant="12" id="Ieh-fc-ZY9"/>
                             <constraint firstItem="ySv-KQ-uh2" firstAttribute="leading" secondItem="cfg-Ai-SdD" secondAttribute="leading" constant="16" id="LP5-ue-QFp"/>
                             <constraint firstItem="cfg-Ai-SdD" firstAttribute="bottom" secondItem="gTD-T4-Ht9" secondAttribute="bottom" constant="30" id="WfR-e4-UCP"/>
+                            <constraint firstItem="Idu-PR-FMW" firstAttribute="leading" secondItem="cfg-Ai-SdD" secondAttribute="leading" constant="12" id="YEw-V3-4e3"/>
                             <constraint firstItem="cfg-Ai-SdD" firstAttribute="trailing" secondItem="ySv-KQ-uh2" secondAttribute="trailing" constant="15" id="bdb-QR-qFD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cfg-Ai-SdD"/>
@@ -368,8 +370,146 @@
             </objects>
             <point key="canvasLocation" x="371.01449275362324" y="137.94642857142856"/>
         </scene>
+        <!--Review Rating Checklist View Controller-->
+        <scene sceneID="1A1-1G-YuO">
+            <objects>
+                <viewController id="qHK-Ie-ndY" customClass="ReviewRatingChecklistViewController" customModule="PrivateYelp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L9h-OU-Gkv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0A4-oY-SC6">
+                                <rect key="frame" x="16" y="75" width="383" height="742"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="-4" translatesAutoresizingMaskIntoConstraints="NO" id="DPR-Sr-Xl7">
+                                        <rect key="frame" x="16" y="24" width="351" height="67"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVp-Is-ozt">
+                                                <rect key="frame" x="0.0" y="0.0" width="279" height="47"/>
+                                                <fontDescription key="fontDescription" name="HKGrotesk-Bold" family="HK Grotesk" pointSize="36"/>
+                                                <color key="textColor" red="0.34901960780000002" green="0.29411764709999999" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="DtX-TL-tH8">
+                                                <rect key="frame" x="0.0" y="43" width="150.5" height="24"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="addressIcon" translatesAutoresizingMaskIntoConstraints="NO" id="lji-z0-Mwo">
+                                                        <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="24" id="Zt2-NH-UYT"/>
+                                                            <constraint firstAttribute="height" constant="24" id="oea-Vr-MoE"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9bH-rA-lWn">
+                                                        <rect key="frame" x="28" y="0.0" width="122.5" height="24"/>
+                                                        <fontDescription key="fontDescription" name="HKGrotesk-SemiBold" family="HK Grotesk" pointSize="14"/>
+                                                        <color key="textColor" red="0.2156862745" green="0.22352941179999999" blue="0.18039215689999999" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="fjR-W6-Mwt">
+                                        <rect key="frame" x="16" y="123" width="351" height="40"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whatHadHeaderIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Sfz-5E-h3L">
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="What I Had" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wtE-NG-DZD">
+                                                <rect key="frame" x="45" y="0.0" width="306" height="40"/>
+                                                <fontDescription key="fontDescription" name="HKGrotesk-Bold" family="HK Grotesk" pointSize="24"/>
+                                                <color key="textColor" red="0.34901960780000002" green="0.29411764709999999" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s7h-tw-aYl">
+                                        <rect key="frame" x="-4" y="717" width="40" height="40"/>
+                                        <state key="normal" image="saveLaterButton"/>
+                                        <connections>
+                                            <action selector="saveButtonTapped:" destination="qHK-Ie-ndY" eventType="touchUpInside" id="rrU-fF-e7L"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nKj-QY-VKO">
+                                        <rect key="frame" x="16" y="177" width="352" height="25"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="addNewItemIcon" translatesAutoresizingMaskIntoConstraints="NO" id="ieU-1U-PtZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="24" height="25"/>
+                                            </imageView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Add a new item" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eyF-rx-DTs">
+                                                <rect key="frame" x="32" y="0.0" width="320" height="25"/>
+                                                <fontDescription key="fontDescription" name="HKGrotesk-SemiBold" family="HK Grotesk" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dR4-ra-Dlo">
+                                        <rect key="frame" x="16" y="214" width="351" height="6"/>
+                                        <color key="backgroundColor" red="0.34901960780000002" green="0.29411764709999999" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="6" id="IzJ-vl-oxW"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="nKj-QY-VKO" secondAttribute="trailing" constant="15" id="CTT-cN-hsB"/>
+                                    <constraint firstItem="DPR-Sr-Xl7" firstAttribute="leading" secondItem="0A4-oY-SC6" secondAttribute="leading" constant="16" id="HH6-e8-HZG"/>
+                                    <constraint firstItem="fjR-W6-Mwt" firstAttribute="leading" secondItem="0A4-oY-SC6" secondAttribute="leading" constant="16" id="JDa-rL-2cF"/>
+                                    <constraint firstAttribute="trailing" secondItem="fjR-W6-Mwt" secondAttribute="trailing" constant="16" id="KCb-08-0ej"/>
+                                    <constraint firstItem="DPR-Sr-Xl7" firstAttribute="top" secondItem="0A4-oY-SC6" secondAttribute="top" constant="24" id="Nup-kj-iqe"/>
+                                    <constraint firstAttribute="trailing" secondItem="dR4-ra-Dlo" secondAttribute="trailing" constant="16" id="Pka-NH-4qX"/>
+                                    <constraint firstItem="fjR-W6-Mwt" firstAttribute="top" secondItem="DPR-Sr-Xl7" secondAttribute="bottom" constant="32" id="TA1-We-ffl"/>
+                                    <constraint firstItem="nKj-QY-VKO" firstAttribute="top" secondItem="fjR-W6-Mwt" secondAttribute="bottom" constant="14" id="ZJk-e8-uQI"/>
+                                    <constraint firstItem="dR4-ra-Dlo" firstAttribute="leading" secondItem="0A4-oY-SC6" secondAttribute="leading" constant="16" id="aRB-bW-oSU"/>
+                                    <constraint firstItem="dR4-ra-Dlo" firstAttribute="top" secondItem="nKj-QY-VKO" secondAttribute="bottom" constant="12" id="s4B-7a-bKS"/>
+                                    <constraint firstItem="nKj-QY-VKO" firstAttribute="leading" secondItem="0A4-oY-SC6" secondAttribute="leading" constant="16" id="tUI-2Y-996"/>
+                                    <constraint firstAttribute="trailing" secondItem="DPR-Sr-Xl7" secondAttribute="trailing" constant="16" id="zqd-tR-IIL"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NA1-xV-jLT">
+                                <rect key="frame" x="362" y="792" width="40" height="40"/>
+                                <state key="normal" image="nextButton"/>
+                                <connections>
+                                    <action selector="nextButtonTapped:" destination="qHK-Ie-ndY" eventType="touchUpInside" id="qFu-4j-26P"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="w2Z-zO-Bpu" firstAttribute="bottom" secondItem="s7h-tw-aYl" secondAttribute="bottom" constant="30" id="1aT-uL-v7R"/>
+                            <constraint firstItem="0A4-oY-SC6" firstAttribute="top" secondItem="w2Z-zO-Bpu" secondAttribute="top" constant="31" id="3IW-JV-Q8I"/>
+                            <constraint firstItem="0A4-oY-SC6" firstAttribute="leading" secondItem="w2Z-zO-Bpu" secondAttribute="leading" constant="16" id="9gf-tZ-V7Q"/>
+                            <constraint firstItem="s7h-tw-aYl" firstAttribute="leading" secondItem="w2Z-zO-Bpu" secondAttribute="leading" constant="12" id="TI4-Gu-uq5"/>
+                            <constraint firstItem="w2Z-zO-Bpu" firstAttribute="bottom" secondItem="0A4-oY-SC6" secondAttribute="bottom" constant="45" id="obK-q6-5A6"/>
+                            <constraint firstItem="w2Z-zO-Bpu" firstAttribute="trailing" secondItem="NA1-xV-jLT" secondAttribute="trailing" constant="12" id="s1D-Ep-flH"/>
+                            <constraint firstItem="w2Z-zO-Bpu" firstAttribute="trailing" secondItem="0A4-oY-SC6" secondAttribute="trailing" constant="15" id="vuq-Ym-Fhf"/>
+                            <constraint firstItem="w2Z-zO-Bpu" firstAttribute="bottom" secondItem="NA1-xV-jLT" secondAttribute="bottom" constant="30" id="zYE-yH-81b"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="w2Z-zO-Bpu"/>
+                    </view>
+                    <connections>
+                        <outlet property="addressLabel" destination="9bH-rA-lWn" id="cPx-1s-wZD"/>
+                        <outlet property="contentView" destination="0A4-oY-SC6" id="Xpe-rn-ldu"/>
+                        <outlet property="nameLabel" destination="hVp-Is-ozt" id="Vu4-2Y-FAp"/>
+                        <outlet property="nextButton" destination="NA1-xV-jLT" id="avF-Fq-Nwh"/>
+                        <outlet property="saveButton" destination="s7h-tw-aYl" id="NuP-vC-aXu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eru-9P-IsX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2886.9565217391305" y="141.96428571428569"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="addNewItemIcon" width="24" height="24"/>
         <image name="addressIcon" width="24" height="24"/>
         <image name="checklistButtonUnselected" width="24" height="24"/>
         <image name="checklistHeaderIcon" width="40" height="40"/>
@@ -379,5 +519,6 @@
         <image name="ratingHeaderIcon" width="40" height="40"/>
         <image name="saveLaterButton" width="40" height="40"/>
         <image name="starButtonUnselected" width="24" height="24"/>
+        <image name="whatHadHeaderIcon" width="40" height="40"/>
     </resources>
 </document>
