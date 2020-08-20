@@ -26,6 +26,11 @@ class ReviewRatingChecklistViewController: UIViewController {
     @IBOutlet weak var dirtyBathroomsButton: UIButton!
     @IBOutlet weak var fineDiningButton: UIButton!
     
+    var isKidsSelected: Bool = false
+    var isGoodForDatesSelected: Bool = false
+    var isSmallSpaceSelected: Bool = false
+    var isDirtyBathroomsSelected: Bool = false
+    var isFineDiningSelected: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -107,18 +112,53 @@ class ReviewRatingChecklistViewController: UIViewController {
     }
     
     @IBAction func noKidsTapped(_ sender: Any) {
+        if !self.isKidsSelected {
+            self.noKidsButton.setImage(UIImage(named: "checklistButtonSelected"), for: .normal)
+            self.isKidsSelected = true
+        } else {
+            self.noKidsButton.setImage(UIImage(named: "checklistButtonUnselected"), for: .normal)
+            self.isKidsSelected = false
+        }
     }
     
     @IBAction func goodForDatesTapped(_ sender: Any) {
+        if !self.isGoodForDatesSelected {
+            self.goodForDatesButton.setImage(UIImage(named: "checklistButtonSelected"), for: .normal)
+            self.isGoodForDatesSelected = true
+        } else {
+            self.goodForDatesButton.setImage(UIImage(named: "checklistButtonUnselected"), for: .normal)
+            self.isGoodForDatesSelected = false
+        }
     }
     
     @IBAction func smallSpaceTapped(_ sender: Any) {
+        if !self.isSmallSpaceSelected {
+            self.smallSpaceButton.setImage(UIImage(named: "checklistButtonSelected"), for: .normal)
+            self.isSmallSpaceSelected = true
+        } else {
+            self.smallSpaceButton.setImage(UIImage(named: "checklistButtonUnselected"), for: .normal)
+            self.isSmallSpaceSelected = false
+        }
     }
     
     @IBAction func dirtyBathroomsTapped(_ sender: Any) {
+        if !self.isDirtyBathroomsSelected {
+            self.dirtyBathroomsButton.setImage(UIImage(named: "checklistButtonSelected"), for: .normal)
+            self.isDirtyBathroomsSelected = true
+        } else {
+            self.dirtyBathroomsButton.setImage(UIImage(named: "checklistButtonUnselected"), for: .normal)
+            self.isDirtyBathroomsSelected = false
+        }
     }
     
     @IBAction func fineDiningTapped(_ sender: Any) {
+        if !self.isFineDiningSelected {
+            self.fineDiningButton.setImage(UIImage(named: "checklistButtonSelected"), for: .normal)
+            self.isFineDiningSelected = true
+        } else {
+            self.fineDiningButton.setImage(UIImage(named: "checklistButtonUnselected"), for: .normal)
+            self.isFineDiningSelected = false
+        }
     }
     
     @IBAction func saveButtonTapped(_ sender: Any) {
