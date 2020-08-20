@@ -32,6 +32,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uRy-Rn-UwU">
                                 <rect key="frame" x="362" y="792" width="40" height="40"/>
                                 <state key="normal" image="myReviewsButtonBottomBarUnselected"/>
+                                <connections>
+                                    <segue destination="X0E-3R-EZy" kind="show" id="yWK-v6-P8G"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sqx-g9-FlE">
                                 <rect key="frame" x="12" y="792" width="40" height="40"/>
@@ -63,6 +66,64 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yIS-Pi-WT1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1281.1594202898552" y="137.94642857142856"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="Yq8-2E-pH3">
+            <objects>
+                <tableViewController id="X0E-3R-EZy" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="D1S-38-6Dr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="LGg-bq-Bm1">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="97"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eI9-l1-UxF">
+                                    <rect key="frame" x="18" y="91" width="379" height="6"/>
+                                    <color key="backgroundColor" red="0.34901960780000002" green="0.29411764709999999" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="6" id="HHF-en-ULV"/>
+                                    </constraints>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Reviews" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NUz-F5-EYe">
+                                    <rect key="frame" x="18" y="51" width="379" height="32"/>
+                                    <fontDescription key="fontDescription" name="HKGrotesk-Bold" family="HK Grotesk" pointSize="32"/>
+                                    <color key="textColor" red="0.34901960780000002" green="0.29411764709999999" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstItem="NUz-F5-EYe" firstAttribute="top" secondItem="LGg-bq-Bm1" secondAttribute="top" constant="51" id="763-hd-Gek"/>
+                                <constraint firstAttribute="bottom" secondItem="eI9-l1-UxF" secondAttribute="bottom" id="9VS-48-bWa"/>
+                                <constraint firstItem="NUz-F5-EYe" firstAttribute="leading" secondItem="LGg-bq-Bm1" secondAttribute="leading" constant="18" id="Amp-JM-tgw"/>
+                                <constraint firstAttribute="trailing" secondItem="NUz-F5-EYe" secondAttribute="trailing" constant="17" id="HaS-mJ-Bpt"/>
+                                <constraint firstItem="eI9-l1-UxF" firstAttribute="leading" secondItem="LGg-bq-Bm1" secondAttribute="leading" constant="18" id="dXv-JE-Vms"/>
+                                <constraint firstAttribute="trailing" secondItem="eI9-l1-UxF" secondAttribute="trailing" constant="17" id="uKE-9g-U3x"/>
+                                <constraint firstItem="eI9-l1-UxF" firstAttribute="top" secondItem="NUz-F5-EYe" secondAttribute="bottom" constant="8" id="wJN-B3-ZGg"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReviewCell" rowHeight="63" id="sV3-C5-Cza" customClass="ReviewTableViewCell" customModule="PrivateYelp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="125" width="414" height="63"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sV3-C5-Cza" id="4HZ-8I-AGm">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="63"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="X0E-3R-EZy" id="0Ee-78-bfe"/>
+                            <outlet property="delegate" destination="X0E-3R-EZy" id="TK9-5Z-HTC"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="wnu-1L-rDj"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DGK-yl-HGf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2027.5362318840582" y="-532.36607142857144"/>
         </scene>
         <!--Review Rating Checklist View Controller-->
         <scene sceneID="ajl-Z1-goN">
