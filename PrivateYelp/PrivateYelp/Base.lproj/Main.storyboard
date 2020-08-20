@@ -43,7 +43,7 @@
                                 <rect key="frame" x="12" y="792" width="40" height="40"/>
                                 <state key="normal" image="mapButtonBottomBarSelected"/>
                                 <connections>
-                                    <segue destination="hPo-ha-Ng0" kind="presentation" modalPresentationStyle="overFullScreen" id="8SL-4R-JKZ"/>
+                                    <segue destination="hPo-ha-Ng0" kind="show" id="8SL-4R-JKZ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -436,7 +436,7 @@
                                 <state key="normal" image="nextButton"/>
                                 <connections>
                                     <action selector="nextButtonTapped:" destination="hPo-ha-Ng0" eventType="touchUpInside" id="7oz-dt-bBN"/>
-                                    <segue destination="qHK-Ie-ndY" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="E8M-6E-aBK"/>
+                                    <segue destination="qHK-Ie-ndY" kind="show" animates="NO" id="E8M-6E-aBK"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -453,6 +453,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cfg-Ai-SdD"/>
                     </view>
+                    <navigationItem key="navigationItem" id="xVU-1e-IiB"/>
                     <connections>
                         <outlet property="addressLabel" destination="un0-Rw-7la" id="QIz-rU-b86"/>
                         <outlet property="contentView" destination="ySv-KQ-uh2" id="5Fx-Ht-2tP"/>
@@ -602,7 +603,7 @@
                                 <state key="normal" image="nextButton"/>
                                 <connections>
                                     <action selector="nextButtonTapped:" destination="qHK-Ie-ndY" eventType="touchUpInside" id="ps2-5j-lJt"/>
-                                    <segue destination="YtC-pJ-HOg" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="3Qs-vP-BXD"/>
+                                    <segue destination="YtC-pJ-HOg" kind="show" animates="NO" id="3Qs-vP-BXD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -619,6 +620,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="w2Z-zO-Bpu"/>
                     </view>
+                    <navigationItem key="navigationItem" id="rSb-en-RtE"/>
                     <connections>
                         <outlet property="addressLabel" destination="9bH-rA-lWn" id="aCz-Ph-0N9"/>
                         <outlet property="contentView" destination="0A4-oY-SC6" id="9Im-Mf-cYh"/>
@@ -725,7 +727,7 @@
                                 <state key="normal" image="nextButton"/>
                                 <connections>
                                     <action selector="nextButtonTapped:" destination="YtC-pJ-HOg" eventType="touchUpInside" id="zeq-tU-mLW"/>
-                                    <segue destination="5w9-D8-DRR" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="qdg-Pe-HXT"/>
+                                    <segue destination="5w9-D8-DRR" kind="show" animates="NO" id="qdg-Pe-HXT"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -742,6 +744,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="j6R-3v-sPS"/>
                     </view>
+                    <navigationItem key="navigationItem" id="qDp-nS-pjG"/>
                     <connections>
                         <outlet property="addressLabel" destination="T0v-65-FNm" id="N7J-zk-682"/>
                         <outlet property="contentView" destination="HFq-xj-TWr" id="er4-cf-ugu"/>
@@ -864,6 +867,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oPZ-ad-dPJ"/>
                     </view>
+                    <navigationItem key="navigationItem" id="HAH-DE-Nen"/>
                     <connections>
                         <outlet property="addressLabel" destination="BmJ-Uy-bO7" id="DoF-J2-ZiT"/>
                         <outlet property="contentView" destination="b5g-Xv-Vxl" id="5Ei-Wt-OOa"/>
