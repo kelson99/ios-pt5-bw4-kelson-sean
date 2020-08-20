@@ -15,6 +15,7 @@ class MapViewController: UIViewController {
     @IBOutlet weak var myReviewsButton: UIButton!
     
     let locationManager = CLLocationManager()
+    var mostRecentPlacemark: CLPlacemark?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,15 +56,25 @@ extension MapViewController : CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let location = locations.first {
-            let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
-            let region = MKCoordinateRegion(center: location.coordinate, span: span)
-            mapView.setRegion(region, animated: true)
-            NSLog("location: \(location)")
-        }
+        guard let location = locations.first else { return }
+        
+        let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+        let region = MKCoordinateRegion(center: location.coordinate, span: span)
+        mapView.setRegion(region, animated: true)
+        NSLog("location: \(location)")
         
         let geocoder = CLGeocoder()
-//        geocoder.reverseGeocodeLocation(, completionHandler: <#T##CLGeocodeCompletionHandler##CLGeocodeCompletionHandler##([CLPlacemark]?, Error?) -> Void#>)
+        geocoder.reverseGeocodeLocation(location) { (placemarks, error) in
+            if let error = error {
+                NSLog("error with geocoder: \(error)")
+            }
+            
+            if let placemark = placemarks?.first {
+                self.mostRecentPlacemark = placemark
+                NSLog("Name of placemark: \(placemark.name)")
+            }
+        }
+        
     }
     
     
