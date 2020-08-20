@@ -21,6 +21,8 @@ class MyReviewsViewController: UIViewController {
 
         tableView.delegate = self
         tableView.dataSource = self
+        
+        setUpViews()
     }
     
     private func setUpViews() {
