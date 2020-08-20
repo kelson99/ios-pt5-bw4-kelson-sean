@@ -24,7 +24,7 @@ class ReviewPhotosViewController: UIViewController {
     
     private func setUpViews() {
         
-        let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.regular)
+        let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.extraLight)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = view.bounds
         blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -61,6 +61,7 @@ class ReviewPhotosViewController: UIViewController {
     }
     
     @IBAction func saveButtonTapped(_ sender: Any) {
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     /*
