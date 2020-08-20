@@ -66,18 +66,44 @@ class ReviewRatingChecklistViewController: UIViewController {
     }
     
     @IBAction func oneStarTapped(_ sender: Any) {
+        self.oneStarButton.setImage(UIImage(named: "starButtonSelected"), for: .normal)
+        self.twoStarButton.setImage(UIImage(named: "starButtonUnselected"), for: .normal)
+        self.threeStarButton.setImage(UIImage(named: "starButtonUnselected"), for: .normal)
+        self.fourStarButton.setImage(UIImage(named: "starButtonUnselected"), for: .normal)
+        self.fiveStarButton.setImage(UIImage(named: "starButtonUnselected"), for: .normal)
+        
     }
     
     @IBAction func twoStarTapped(_ sender: Any) {
+        self.oneStarButton.setImage(UIImage(named: "starButtonSelected"), for: .normal)
+        self.twoStarButton.setImage(UIImage(named: "starButtonSelected"), for: .normal)
+        self.threeStarButton.setImage(UIImage(named: "starButtonUnselected"), for: .normal)
+        self.fourStarButton.setImage(UIImage(named: "starButtonUnselected"), for: .normal)
+        self.fiveStarButton.setImage(UIImage(named: "starButtonUnselected"), for: .normal)
     }
     
     @IBAction func threeStarTapped(_ sender: Any) {
+        self.oneStarButton.setImage(UIImage(named: "starButtonSelected"), for: .normal)
+        self.twoStarButton.setImage(UIImage(named: "starButtonSelected"), for: .normal)
+        self.threeStarButton.setImage(UIImage(named: "starButtonSelected"), for: .normal)
+        self.fourStarButton.setImage(UIImage(named: "starButtonUnselected"), for: .normal)
+        self.fiveStarButton.setImage(UIImage(named: "starButtonUnselected"), for: .normal)
     }
     
     @IBAction func fourStarTapped(_ sender: Any) {
+        self.oneStarButton.setImage(UIImage(named: "starButtonSelected"), for: .normal)
+        self.twoStarButton.setImage(UIImage(named: "starButtonSelected"), for: .normal)
+        self.threeStarButton.setImage(UIImage(named: "starButtonSelected"), for: .normal)
+        self.fourStarButton.setImage(UIImage(named: "starButtonSelected"), for: .normal)
+        self.fiveStarButton.setImage(UIImage(named: "starButtonUnselected"), for: .normal)
     }
     
     @IBAction func fiveStarTapped(_ sender: Any) {
+        self.oneStarButton.setImage(UIImage(named: "starButtonSelected"), for: .normal)
+        self.twoStarButton.setImage(UIImage(named: "starButtonSelected"), for: .normal)
+        self.threeStarButton.setImage(UIImage(named: "starButtonSelected"), for: .normal)
+        self.fourStarButton.setImage(UIImage(named: "starButtonSelected"), for: .normal)
+        self.fiveStarButton.setImage(UIImage(named: "starButtonSelected"), for: .normal)
     }
     
     @IBAction func noKidsTapped(_ sender: Any) {
