@@ -9,11 +9,19 @@
 import UIKit
 
 class ReviewTableViewCell: UITableViewCell {
+    
+//    var review: Review? {
+//        didSet {
+//            updateViews()
+//        }
+//    }
+
 
     @IBOutlet weak var cellView: UIView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,9 +36,14 @@ class ReviewTableViewCell: UITableViewCell {
     }
     
     private func updateViews() {
+        nameLabel.text = "Test Name"
+        addressLabel.text = "123 Street SF, CA"
+        ratingLabel.text = "5"
+        
+        // Set up rounded cell
         cellView.layer.cornerRadius = 15.0
         
-        //Set up shadows
+        //Set up cell shadows
         cellView.layer.shadowColor = UIColor.black.cgColor
         cellView.layer.shadowOpacity = 0.25
         cellView.layer.shadowRadius = 5
