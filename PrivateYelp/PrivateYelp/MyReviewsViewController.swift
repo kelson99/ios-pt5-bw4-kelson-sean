@@ -73,11 +73,11 @@ class MyReviewsViewController: UIViewController {
         mapButton.layer.shadowOffset = CGSize(width: 0, height: 4)
         mapButton.layer.masksToBounds = false
         
-        mapButton.layer.shadowColor = UIColor.black.cgColor
-        mapButton.layer.shadowOpacity = 0.25
-        mapButton.layer.shadowRadius = 5
-        mapButton.layer.shadowOffset = CGSize(width: 0, height: 4)
-        mapButton.layer.masksToBounds = false
+        myReviewsButton.layer.shadowColor = UIColor.black.cgColor
+        myReviewsButton.layer.shadowOpacity = 0.25
+        myReviewsButton.layer.shadowRadius = 5
+        myReviewsButton.layer.shadowOffset = CGSize(width: 0, height: 4)
+        myReviewsButton.layer.masksToBounds = false
     }
     
     func loadReviews() {
