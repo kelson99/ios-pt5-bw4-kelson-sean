@@ -10,11 +10,11 @@ import UIKit
 
 class ReviewTableViewCell: UITableViewCell {
     
-//    var review: Review? {
-//        didSet {
-//            updateViews()
-//        }
-//    }
+    var review: Review? {
+        didSet {
+            updateViews()
+        }
+    }
 
 
     @IBOutlet weak var cellView: UIView!
