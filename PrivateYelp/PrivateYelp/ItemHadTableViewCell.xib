@@ -33,22 +33,37 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XRx-xW-sG0">
                                 <rect key="frame" x="0.0" y="0.0" width="24" height="30"/>
                                 <state key="normal" image="starButtonUnselected"/>
+                                <connections>
+                                    <action selector="oneStarTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="WD5-dy-smO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SHr-3Q-hru">
                                 <rect key="frame" x="24" y="0.0" width="24" height="30"/>
                                 <state key="normal" image="starButtonUnselected"/>
+                                <connections>
+                                    <action selector="twoStarTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ZNy-Eg-15W"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bzf-qx-qE6">
                                 <rect key="frame" x="48" y="0.0" width="24" height="30"/>
                                 <state key="normal" image="starButtonUnselected"/>
+                                <connections>
+                                    <action selector="threeStarTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="mpx-yy-KoA"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RKr-2A-yQu">
                                 <rect key="frame" x="72" y="0.0" width="24" height="30"/>
                                 <state key="normal" image="starButtonUnselected"/>
+                                <connections>
+                                    <action selector="fourStarTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="hEm-OR-rxm"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HSe-yL-Y1f">
                                 <rect key="frame" x="96" y="0.0" width="24" height="30"/>
                                 <state key="normal" image="starButtonUnselected"/>
+                                <connections>
+                                    <action selector="fiveStarTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="c3i-7d-VB0"/>
+                                </connections>
                             </button>
                         </subviews>
                     </stackView>
@@ -64,6 +79,14 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="fiveStarButton" destination="HSe-yL-Y1f" id="w4T-wL-C3i"/>
+                <outlet property="fourStarButton" destination="RKr-2A-yQu" id="k9E-YU-bQd"/>
+                <outlet property="itemNameLabel" destination="Wmi-b9-JSm" id="Vp9-Ga-hkJ"/>
+                <outlet property="oneStarButton" destination="XRx-xW-sG0" id="pIO-DM-t9L"/>
+                <outlet property="threeStarButton" destination="Bzf-qx-qE6" id="uZx-Uv-rpY"/>
+                <outlet property="twoStarButton" destination="SHr-3Q-hru" id="foo-Hf-CEI"/>
+            </connections>
             <point key="canvasLocation" x="133" y="154"/>
         </tableViewCell>
     </objects>
