@@ -17,6 +17,9 @@ class ReviewWhatHadViewController: UIViewController {
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var dividerLine: UIView!
+    @IBOutlet weak var tableView: UITableView!
+    
+    var itemsHadArray: Array<[String : String]> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,6 +65,10 @@ class ReviewWhatHadViewController: UIViewController {
     @IBAction func nextButtonTapped(_ sender: Any) {
     }
     
+    func addItemHadUserInterface(itemHad: String) {
+        
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -72,4 +79,34 @@ class ReviewWhatHadViewController: UIViewController {
     }
     */
 
+}
+
+extension ReviewWhatHadViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if let text = textField.text {
+            self.addItemHadUserInterface(itemHad: text)
+        }
+        
+        return true
+    }
+}
+
+extension ReviewWhatHadViewController: UITableViewDelegate {
+    
+}
+
+extension ReviewWhatHadViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        self.itemsHadArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ItemHadCell", for: indexPath) as? ItemHadTableViewCell else { return UITableViewCell() }
+        
+        let itemHad = itemsHadArray[indexPath.row]
+        cell.itemHad = itemHad
+        return cell
+    }
+    
+    
 }

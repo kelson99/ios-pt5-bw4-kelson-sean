@@ -19,6 +19,8 @@
 		66DEB59324EF0D58001FA167 /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DEB59124EF0D58001FA167 /* ReviewTableViewCell.swift */; };
 		66DEB59424EF0D58001FA167 /* ReviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66DEB59224EF0D58001FA167 /* ReviewTableViewCell.xib */; };
 		66DEB59624EF14CF001FA167 /* MyReviewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DEB59524EF14CF001FA167 /* MyReviewsViewController.swift */; };
+		66DEB59924F0147B001FA167 /* ItemHadTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DEB59724F0147B001FA167 /* ItemHadTableViewCell.swift */; };
+		66DEB59A24F0147B001FA167 /* ItemHadTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66DEB59824F0147B001FA167 /* ItemHadTableViewCell.xib */; };
 		66F7337D24ECB90B009FF9C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F7337C24ECB90B009FF9C3 /* AppDelegate.swift */; };
 		66F7337F24ECB90B009FF9C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F7337E24ECB90B009FF9C3 /* SceneDelegate.swift */; };
 		66F7338424ECB90B009FF9C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66F7338224ECB90B009FF9C3 /* Main.storyboard */; };
@@ -44,6 +46,8 @@
 		66DEB59124EF0D58001FA167 /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
 		66DEB59224EF0D58001FA167 /* ReviewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewTableViewCell.xib; sourceTree = "<group>"; };
 		66DEB59524EF14CF001FA167 /* MyReviewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyReviewsViewController.swift; sourceTree = "<group>"; };
+		66DEB59724F0147B001FA167 /* ItemHadTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemHadTableViewCell.swift; sourceTree = "<group>"; };
+		66DEB59824F0147B001FA167 /* ItemHadTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemHadTableViewCell.xib; sourceTree = "<group>"; };
 		66F7337924ECB90B009FF9C3 /* PrivateYelp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrivateYelp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66F7337C24ECB90B009FF9C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66F7337E24ECB90B009FF9C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +99,8 @@
 				66DEB59124EF0D58001FA167 /* ReviewTableViewCell.swift */,
 				66DEB59224EF0D58001FA167 /* ReviewTableViewCell.xib */,
 				66F733A024ED97B1009FF9C3 /* MapViewController.swift */,
+				66DEB59724F0147B001FA167 /* ItemHadTableViewCell.swift */,
+				66DEB59824F0147B001FA167 /* ItemHadTableViewCell.xib */,
 				6611AE6324EDAFD9004ED358 /* ReviewRatingChecklistViewController.swift */,
 				6611AE6524EDD6C6004ED358 /* ReviewWhatHadViewController.swift */,
 				6611AE6724EDD8F8004ED358 /* ReviewPhotosViewController.swift */,
@@ -181,6 +187,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66DEB59A24F0147B001FA167 /* ItemHadTableViewCell.xib in Resources */,
 				66F7339C24ED91DE009FF9C3 /* HKGrotesk-Regular.otf in Resources */,
 				66F7338C24ECB90C009FF9C3 /* LaunchScreen.storyboard in Resources */,
 				66F7339B24ED91DB009FF9C3 /* HKGrotesk-Bold.otf in Resources */,
@@ -202,6 +209,7 @@
 				66F7338724ECB90B009FF9C3 /* PrivateYelp.xcdatamodeld in Sources */,
 				66F7337D24ECB90B009FF9C3 /* AppDelegate.swift in Sources */,
 				5094617524ED972600C17BA7 /* User+Convenience.swift in Sources */,
+				66DEB59924F0147B001FA167 /* ItemHadTableViewCell.swift in Sources */,
 				6611AE6624EDD6C6004ED358 /* ReviewWhatHadViewController.swift in Sources */,
 				5094617324ED971600C17BA7 /* Review+Convenience.swift in Sources */,
 				66DEB59324EF0D58001FA167 /* ReviewTableViewCell.swift in Sources */,

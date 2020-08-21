@@ -575,10 +575,15 @@
                                             <constraint firstAttribute="height" constant="6" id="IzJ-vl-oxW"/>
                                         </constraints>
                                     </view>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yio-zS-W0o">
+                                        <rect key="frame" x="16" y="236" width="351" height="473"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </tableView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="nKj-QY-VKO" secondAttribute="trailing" constant="15" id="CTT-cN-hsB"/>
+                                    <constraint firstItem="yio-zS-W0o" firstAttribute="leading" secondItem="0A4-oY-SC6" secondAttribute="leading" constant="16" id="Eh8-W4-mks"/>
                                     <constraint firstItem="DPR-Sr-Xl7" firstAttribute="leading" secondItem="0A4-oY-SC6" secondAttribute="leading" constant="16" id="HH6-e8-HZG"/>
                                     <constraint firstItem="fjR-W6-Mwt" firstAttribute="leading" secondItem="0A4-oY-SC6" secondAttribute="leading" constant="16" id="JDa-rL-2cF"/>
                                     <constraint firstAttribute="trailing" secondItem="fjR-W6-Mwt" secondAttribute="trailing" constant="16" id="KCb-08-0ej"/>
@@ -588,7 +593,10 @@
                                     <constraint firstItem="nKj-QY-VKO" firstAttribute="top" secondItem="fjR-W6-Mwt" secondAttribute="bottom" constant="14" id="ZJk-e8-uQI"/>
                                     <constraint firstItem="dR4-ra-Dlo" firstAttribute="leading" secondItem="0A4-oY-SC6" secondAttribute="leading" constant="16" id="aRB-bW-oSU"/>
                                     <constraint firstItem="dR4-ra-Dlo" firstAttribute="top" secondItem="nKj-QY-VKO" secondAttribute="bottom" constant="12" id="s4B-7a-bKS"/>
+                                    <constraint firstAttribute="trailing" secondItem="yio-zS-W0o" secondAttribute="trailing" constant="16" id="slc-ez-rnb"/>
                                     <constraint firstItem="nKj-QY-VKO" firstAttribute="leading" secondItem="0A4-oY-SC6" secondAttribute="leading" constant="16" id="tUI-2Y-996"/>
+                                    <constraint firstItem="yio-zS-W0o" firstAttribute="top" secondItem="dR4-ra-Dlo" secondAttribute="bottom" constant="16" id="txV-lH-zhX"/>
+                                    <constraint firstItem="s7h-tw-aYl" firstAttribute="top" secondItem="yio-zS-W0o" secondAttribute="bottom" constant="8" id="yqj-wg-ika"/>
                                     <constraint firstAttribute="trailing" secondItem="DPR-Sr-Xl7" secondAttribute="trailing" constant="16" id="zqd-tR-IIL"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -629,6 +637,7 @@
                         <outlet property="newItemTextField" destination="eyF-rx-DTs" id="esB-LV-XRn"/>
                         <outlet property="nextButton" destination="NA1-xV-jLT" id="nYR-8W-3Yo"/>
                         <outlet property="saveButton" destination="s7h-tw-aYl" id="WVC-01-KEC"/>
+                        <outlet property="tableView" destination="yio-zS-W0o" id="Nig-zP-A7L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eru-9P-IsX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
