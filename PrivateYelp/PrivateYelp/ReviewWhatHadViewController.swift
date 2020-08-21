@@ -13,10 +13,10 @@ class ReviewWhatHadViewController: UIViewController {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
-    @IBOutlet weak var newItemTextField: UITextField!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
-    @IBOutlet weak var dividerLine: UIView!
+    @IBOutlet weak var whatHadTextView: UITextView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

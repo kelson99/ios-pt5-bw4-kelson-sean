@@ -555,40 +555,25 @@
                                             <action selector="saveButtonTapped:" destination="qHK-Ie-ndY" eventType="touchUpInside" id="kZW-qM-He1"/>
                                         </connections>
                                     </button>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nKj-QY-VKO">
-                                        <rect key="frame" x="16" y="177" width="352" height="25"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="addNewItemIcon" translatesAutoresizingMaskIntoConstraints="NO" id="ieU-1U-PtZ">
-                                                <rect key="frame" x="0.0" y="0.0" width="24" height="25"/>
-                                            </imageView>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Add a new item" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eyF-rx-DTs">
-                                                <rect key="frame" x="32" y="0.0" width="320" height="25"/>
-                                                <fontDescription key="fontDescription" name="HKGrotesk-SemiBold" family="HK Grotesk" pointSize="18"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                        </subviews>
-                                    </stackView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dR4-ra-Dlo">
-                                        <rect key="frame" x="16" y="214" width="351" height="6"/>
-                                        <color key="backgroundColor" red="0.34901960780000002" green="0.29411764709999999" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="6" id="IzJ-vl-oxW"/>
-                                        </constraints>
-                                    </view>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Write what you had" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="AOc-d1-CiE">
+                                        <rect key="frame" x="16" y="171" width="351" height="526"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="textColor" red="0.2156862745" green="0.22352941179999999" blue="0.18039215689999999" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HKGrotesk-SemiBold" family="HK Grotesk" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="nKj-QY-VKO" secondAttribute="trailing" constant="15" id="CTT-cN-hsB"/>
+                                    <constraint firstItem="AOc-d1-CiE" firstAttribute="leading" secondItem="0A4-oY-SC6" secondAttribute="leading" constant="16" id="77E-Ry-Xbb"/>
                                     <constraint firstItem="DPR-Sr-Xl7" firstAttribute="leading" secondItem="0A4-oY-SC6" secondAttribute="leading" constant="16" id="HH6-e8-HZG"/>
                                     <constraint firstItem="fjR-W6-Mwt" firstAttribute="leading" secondItem="0A4-oY-SC6" secondAttribute="leading" constant="16" id="JDa-rL-2cF"/>
                                     <constraint firstAttribute="trailing" secondItem="fjR-W6-Mwt" secondAttribute="trailing" constant="16" id="KCb-08-0ej"/>
+                                    <constraint firstItem="AOc-d1-CiE" firstAttribute="top" secondItem="fjR-W6-Mwt" secondAttribute="bottom" constant="8" id="LqJ-WJ-ldt"/>
                                     <constraint firstItem="DPR-Sr-Xl7" firstAttribute="top" secondItem="0A4-oY-SC6" secondAttribute="top" constant="24" id="Nup-kj-iqe"/>
-                                    <constraint firstAttribute="trailing" secondItem="dR4-ra-Dlo" secondAttribute="trailing" constant="16" id="Pka-NH-4qX"/>
                                     <constraint firstItem="fjR-W6-Mwt" firstAttribute="top" secondItem="DPR-Sr-Xl7" secondAttribute="bottom" constant="32" id="TA1-We-ffl"/>
-                                    <constraint firstItem="nKj-QY-VKO" firstAttribute="top" secondItem="fjR-W6-Mwt" secondAttribute="bottom" constant="14" id="ZJk-e8-uQI"/>
-                                    <constraint firstItem="dR4-ra-Dlo" firstAttribute="leading" secondItem="0A4-oY-SC6" secondAttribute="leading" constant="16" id="aRB-bW-oSU"/>
-                                    <constraint firstItem="dR4-ra-Dlo" firstAttribute="top" secondItem="nKj-QY-VKO" secondAttribute="bottom" constant="12" id="s4B-7a-bKS"/>
-                                    <constraint firstItem="nKj-QY-VKO" firstAttribute="leading" secondItem="0A4-oY-SC6" secondAttribute="leading" constant="16" id="tUI-2Y-996"/>
+                                    <constraint firstAttribute="trailing" secondItem="AOc-d1-CiE" secondAttribute="trailing" constant="16" id="ZB7-dd-ivb"/>
+                                    <constraint firstItem="s7h-tw-aYl" firstAttribute="top" secondItem="AOc-d1-CiE" secondAttribute="bottom" constant="20" id="mfR-iX-qYs"/>
                                     <constraint firstAttribute="trailing" secondItem="DPR-Sr-Xl7" secondAttribute="trailing" constant="16" id="zqd-tR-IIL"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -624,11 +609,10 @@
                     <connections>
                         <outlet property="addressLabel" destination="9bH-rA-lWn" id="aCz-Ph-0N9"/>
                         <outlet property="contentView" destination="0A4-oY-SC6" id="9Im-Mf-cYh"/>
-                        <outlet property="dividerLine" destination="dR4-ra-Dlo" id="zLh-Gv-cmz"/>
                         <outlet property="nameLabel" destination="hVp-Is-ozt" id="zZj-wq-8oh"/>
-                        <outlet property="newItemTextField" destination="eyF-rx-DTs" id="esB-LV-XRn"/>
                         <outlet property="nextButton" destination="NA1-xV-jLT" id="nYR-8W-3Yo"/>
                         <outlet property="saveButton" destination="s7h-tw-aYl" id="WVC-01-KEC"/>
+                        <outlet property="whatHadTextView" destination="AOc-d1-CiE" id="W6O-qv-d48"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eru-9P-IsX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -883,7 +867,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="addNewItemIcon" width="24" height="24"/>
         <image name="addPhotoEmptyStateButton" width="90" height="137"/>
         <image name="addressIcon" width="24" height="24"/>
         <image name="checklistButtonUnselected" width="24" height="24"/>
