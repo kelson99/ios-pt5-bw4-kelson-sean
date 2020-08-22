@@ -114,9 +114,7 @@ extension MyReviewsViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ReviewCell", for: indexPath) as? ReviewTableViewCell else { return UITableViewCell() }
         
         let review = fetchResultsController.object(at: indexPath)
-        
-        cell.addressLabel.text = review.restaurant?.address
-        cell.nameLabel.text = review.restaurant?.name
+        cell.review = review
         
         return cell
     }

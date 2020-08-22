@@ -36,9 +36,10 @@ class ReviewTableViewCell: UITableViewCell {
     }
     
     private func updateViews() {
-        nameLabel.text = "Test Name"
-        addressLabel.text = "123 Street SF, CA"
-        ratingLabel.text = "5"
+        guard let review = review else { return }
+        nameLabel.text = review.restaurant?.name
+        addressLabel.text = review.restaurant?.address
+        ratingLabel.text = "\(review.overallRating)"
         
         // Set up rounded cell
         cellView.layer.cornerRadius = 15.0
