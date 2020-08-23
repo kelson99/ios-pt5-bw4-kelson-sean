@@ -90,7 +90,10 @@ class MyReviewsViewController: UIViewController {
         tableView.reloadData()
     }
     
-
+    @IBAction func mapButtonTapped(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 
