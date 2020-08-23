@@ -193,15 +193,8 @@ class ReviewRatingChecklistViewController: UIViewController {
         guard let restaurant = restaurant else { return }
         guard let user = user else { return }
         
-        let reviewCreated = Review(overallRating: Double(overallRatingValue), itemPhoto: pngData, menuItem: "", reviewNotes: "", for: restaurant, from: user)
-        controller?.createReview(overallRating: reviewCreated.overallRating,                         dirtyBathrooms: reviewCreated.dirtyBathrooms,
-                                 fineDining: reviewCreated.fineDining,
-                                 goodForDates:reviewCreated.goodForDates,
-                                 itemPhoto: pngData,
-                                 menuItem: reviewCreated.menuItem ?? "",
-                                 noKids: reviewCreated.noKids,
-                                 reviewNotes: reviewCreated.reviewNotes ?? "", smallSpace: reviewCreated.smallSpace, restauraunt: restaurant,
-                                 user: user)
+        _ = Review(overallRating: Double(overallRatingValue), itemPhoto: pngData, menuItem: "", reviewNotes: "", for: restaurant, from: user)
+        controller?.saveToPersistentStore()
         
         self.navigationController?.popToRootViewController(animated: true)
     }
@@ -215,6 +208,7 @@ class ReviewRatingChecklistViewController: UIViewController {
         guard let user = user else { return }
         
         let reviewCreated = Review(overallRating: Double(overallRatingValue), itemPhoto: pngData, menuItem: "", reviewNotes: "", for: restaurant, from: user)
+        controller?.saveToPersistentStore()
         review = reviewCreated
     }
     

@@ -46,4 +46,8 @@ class ModelController {
         return restaurant
         
     }
+    
+    func saveToPersistentStore() {
+        CoreDataStack.shared.saveToPersistentStore()
+    }
 }
