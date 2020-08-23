@@ -684,9 +684,18 @@
                                             <action selector="saveButtonTapped:" destination="YtC-pJ-HOg" eventType="touchUpInside" id="aQl-cO-Wau"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KMz-S8-pRO">
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KMz-S8-pRO">
                                         <rect key="frame" x="16" y="177" width="90" height="137"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="90" id="EWP-W4-kQY"/>
+                                            <constraint firstAttribute="height" constant="137" id="GDQ-BF-nsH"/>
+                                        </constraints>
                                         <state key="normal" image="addPhotoEmptyStateButton"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="addPhotoTapped:" destination="YtC-pJ-HOg" eventType="touchUpInside" id="JZt-WY-0Up"/>
                                         </connections>
@@ -735,6 +744,7 @@
                     <navigationItem key="navigationItem" id="qDp-nS-pjG"/>
                     <connections>
                         <outlet property="addressLabel" destination="T0v-65-FNm" id="N7J-zk-682"/>
+                        <outlet property="choosePhotoButton" destination="KMz-S8-pRO" id="f35-g0-ZS0"/>
                         <outlet property="contentView" destination="HFq-xj-TWr" id="er4-cf-ugu"/>
                         <outlet property="nameLabel" destination="hS6-RB-W6N" id="2Z8-ro-IRE"/>
                         <outlet property="nextButton" destination="iFF-Tx-dNX" id="drJ-5K-Gg8"/>
