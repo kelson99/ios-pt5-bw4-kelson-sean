@@ -238,6 +238,13 @@ class ReviewRatingChecklistViewController: UIViewController {
     }
     
     @IBAction func saveButtonTapped(_ sender: Any) {
+        if review != nil {
+            review?.overallRating = Double(overallRatingValue)
+            review?.dirtyBathrooms = isDirtyBathroomsSelected
+            review?.fineDining = isFineDiningSelected
+            review?.goodForDates = isGoodForDatesSelected
+            review?.noKids = isKidsSelected
+        }
         
         if review == nil {
             guard let image = UIImage(named: "nextButton") else { return }
@@ -247,22 +254,29 @@ class ReviewRatingChecklistViewController: UIViewController {
             guard let user = user else { return }
 
             _ = Review(overallRating: Double(overallRatingValue), dirtyBathrooms: isDirtyBathroomsSelected, fineDining: isFineDiningSelected, goodForDates: isGoodForDatesSelected, noKids: isKidsSelected, itemPhoto: pngData, menuItem: "", reviewNotes: "", smallSpace: isSmallSpaceSelected, for: restaurant, from: user)
-            controller?.saveToPersistentStore()
         }
         
+        controller?.saveToPersistentStore()
         
         self.navigationController?.popToRootViewController(animated: true)
     }
     
     @IBAction func nextButtonTapped(_ sender: Any) {
-        
-        guard let image = UIImage(named: "nextButton") else { return }
-        guard let pngData = image.pngData() else { return }
-        
-        guard let restaurant = restaurant else { return }
-        guard let user = user else { return }
-        
+        if review != nil {
+            review?.overallRating = Double(overallRatingValue)
+            review?.dirtyBathrooms = isDirtyBathroomsSelected
+            review?.fineDining = isFineDiningSelected
+            review?.goodForDates = isGoodForDatesSelected
+            review?.noKids = isKidsSelected
+        }
+
         if review == nil {
+            guard let image = UIImage(named: "nextButton") else { return }
+            guard let pngData = image.pngData() else { return }
+            
+            guard let restaurant = restaurant else { return }
+            guard let user = user else { return }
+            
             let reviewCreated = Review(overallRating: Double(overallRatingValue), dirtyBathrooms: isDirtyBathroomsSelected, fineDining: isFineDiningSelected, goodForDates: isGoodForDatesSelected, noKids: isKidsSelected, itemPhoto: pngData, menuItem: "", reviewNotes: "", smallSpace: isSmallSpaceSelected, for: restaurant, from: user)
             review = reviewCreated
         }
