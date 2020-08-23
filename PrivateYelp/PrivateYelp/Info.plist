@@ -62,5 +62,7 @@
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Curator uses your location to find the place you&apos;re at!</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Curation needs to be able to save photos to your reviews!</string>
 </dict>
 </plist>

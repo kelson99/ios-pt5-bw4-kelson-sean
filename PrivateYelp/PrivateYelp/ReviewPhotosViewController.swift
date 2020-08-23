@@ -8,17 +8,20 @@
 
 import UIKit
 
-class ReviewPhotosViewController: UIViewController {
+class ReviewPhotosViewController: UIViewController, UINavigationControllerDelegate {
     
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var choosePhotoButton: UIButton!
     
     var restaurant: Restaurant?
     var review: Review?
     var controller: ModelController?
+    var imagePicker = UIImagePickerController()
+    var imageData: Data?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,16 +68,27 @@ class ReviewPhotosViewController: UIViewController {
     
     
     @IBAction func addPhotoTapped(_ sender: Any) {
-    }
-    
-    @IBAction func nextButtonTapped(_ sender: Any) {
-        // TODO: Assign photo chosen from libray to review.
-        controller?.saveToPersistentStore()
+        if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum) {
+            imagePicker.delegate = self
+            imagePicker.allowsEditing = false
+            
+            present(imagePicker, animated: true, completion: nil)
+        }
         
     }
     
+    @IBAction func nextButtonTapped(_ sender: Any) {
+        if let imageData = imageData {
+            self.review?.itemPhoto = imageData
+            controller?.saveToPersistentStore()
+        }
+    }
+    
     @IBAction func saveButtonTapped(_ sender: Any) {
-        controller?.saveToPersistentStore()
+        if let imageData = imageData {
+            self.review?.itemPhoto = imageData
+            controller?.saveToPersistentStore()
+        }
         self.navigationController?.popToRootViewController(animated: true)
     }
     
@@ -87,5 +101,16 @@ class ReviewPhotosViewController: UIViewController {
             destinationVC?.review = self.review
             destinationVC?.controller = self.controller
         }
+    }
+}
+
+extension ReviewPhotosViewController: UIImagePickerControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let image = info[.originalImage] as? UIImage else { return }
+        imageData = image.pngData()
+        
+        self.choosePhotoButton.setImage(image, for: .normal)
+        dismiss(animated: true, completion: nil)
+        
     }
 }
