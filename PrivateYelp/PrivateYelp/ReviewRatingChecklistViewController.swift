@@ -35,7 +35,7 @@ class ReviewRatingChecklistViewController: UIViewController {
     var isFineDiningSelected: Bool = false
     
     var restaurant: Restaurant?
-    var review: Review?
+    var review: Review? 
     var controller: ModelController?
     var user: User?
     
@@ -44,6 +44,7 @@ class ReviewRatingChecklistViewController: UIViewController {
         super.viewDidLoad()
         
         setUpViews()
+        updateViews()
         print(restaurant?.name)
         print(restaurant?.reviews?.count)
         print(user?.reviews?.count)
@@ -79,9 +80,59 @@ class ReviewRatingChecklistViewController: UIViewController {
         contentView.layer.shadowRadius = 5
         contentView.layer.shadowOffset = CGSize(width: 0, height: 4)
         contentView.layer.masksToBounds = false
+    }
+    
+    private func updateViews() {
+        // Update name and address
+        if let restaurant = self.restaurant {
+            nameLabel.text = restaurant.name
+            addressLabel.text = restaurant.address
+        } else {
+            self.nameLabel.text = review?.restaurant?.name
+            self.addressLabel.text = review?.restaurant?.address
+        }
         
-        nameLabel.text = self.restaurant?.name
-        addressLabel.text = self.restaurant?.address
+        // Update rating
+        if let review = self.review {
+            switch review.overallRating {
+            case 1:
+                self.oneStarTapped(self)
+            case 2:
+                self.twoStarTapped(self)
+            case 3:
+                self.threeStarTapped(self)
+            case 4:
+                self.fourStarTapped(self)
+            default:
+                self.fiveStarTapped(self)
+            }
+        }
+        
+        //Update checklist
+        if review?.dirtyBathrooms == true {
+            self.dirtyBathroomsButton.setImage(UIImage(named: "checklistButtonSelected"), for: .normal)
+            self.isDirtyBathroomsSelected = true
+        }
+        
+        if review?.noKids == true {
+            self.noKidsButton.setImage(UIImage(named: "checklistButtonSelected"), for: .normal)
+            self.isKidsSelected = true
+        }
+        
+        if review?.goodForDates == true {
+            self.goodForDatesButton.setImage(UIImage(named: "checklistButtonSelected"), for: .normal)
+            self.isGoodForDatesSelected = true
+        }
+        
+        if review?.smallSpace == true {
+            self.smallSpaceButton.setImage(UIImage(named: "checklistButtonSelected"), for: .normal)
+            self.isSmallSpaceSelected = true
+        }
+        
+        if review?.fineDining == true {
+            self.fineDiningButton.setImage(UIImage(named: "checklistButtonSelected"), for: .normal)
+            self.isFineDiningSelected = true
+        }
     }
     
     @IBAction func oneStarTapped(_ sender: Any) {
@@ -187,14 +238,14 @@ class ReviewRatingChecklistViewController: UIViewController {
     }
     
     @IBAction func saveButtonTapped(_ sender: Any) {
-        guard let image = UIImage(named: "nextButton") else { return }
-        guard let pngData = image.pngData() else { return }
-        
-        guard let restaurant = restaurant else { return }
-        guard let user = user else { return }
         
         if review == nil {
-//            _ = Review(overallRating: Double(overallRatingValue), itemPhoto: pngData, menuItem: "", reviewNotes: "", for: restaurant, from: user)
+            guard let image = UIImage(named: "nextButton") else { return }
+            guard let pngData = image.pngData() else { return }
+            
+            guard let restaurant = restaurant else { return }
+            guard let user = user else { return }
+
             _ = Review(overallRating: Double(overallRatingValue), dirtyBathrooms: isDirtyBathroomsSelected, fineDining: isFineDiningSelected, goodForDates: isGoodForDatesSelected, noKids: isKidsSelected, itemPhoto: pngData, menuItem: "", reviewNotes: "", smallSpace: isSmallSpaceSelected, for: restaurant, from: user)
             controller?.saveToPersistentStore()
         }
