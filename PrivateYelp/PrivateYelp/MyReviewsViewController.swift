@@ -181,5 +181,7 @@ extension MyReviewsViewController: NSFetchedResultsControllerDelegate {
 }
 
 extension MyReviewsViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "ShowReviewDetailSegue", sender: tableView)
+    }
 }
