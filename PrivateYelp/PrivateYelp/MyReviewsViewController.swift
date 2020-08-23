@@ -94,22 +94,24 @@ class MyReviewsViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
-    /*
+
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "ShowReviewDetailSegue" {
+            let destinationVC = segue.destination as? ReviewRatingChecklistViewController
+            guard let indexPath = tableView.indexPathForSelectedRow else { return }
+            
+            destinationVC?.review = fetchResultsController.object(at: indexPath)
+            destinationVC?.controller = self.controller
+        }
     }
-    */
+
 
 }
 
 extension MyReviewsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // Fetched results controller here TODO
-        
         return fetchResultsController.sections?[section].numberOfObjects ?? 0
     }
     
@@ -121,6 +123,7 @@ extension MyReviewsViewController: UITableViewDataSource {
         
         return cell
     }
+    
     
     
 }

@@ -119,6 +119,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="hPo-ha-Ng0" kind="show" identifier="ShowReviewDetailSegue" id="ixF-XF-a0D"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -880,6 +883,9 @@
             <point key="canvasLocation" x="4313.04347826087" y="141.96428571428569"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="8SL-4R-JKZ"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="addPhotoEmptyStateButton" width="90" height="137"/>
         <image name="addressIcon" width="24" height="24"/>
