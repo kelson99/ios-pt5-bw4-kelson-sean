@@ -112,7 +112,7 @@
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ReviewCell" id="qxr-BU-h5e" customClass="ReviewTableViewCell" customModule="PrivateYelp" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ReviewCell" id="qxr-BU-h5e" customClass="ReviewTableViewCell" customModule="PrivateYelp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="111" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qxr-BU-h5e" id="7ZW-3q-ro5">
@@ -884,7 +884,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="8SL-4R-JKZ"/>
+        <segue reference="ixF-XF-a0D"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="addPhotoEmptyStateButton" width="90" height="137"/>
