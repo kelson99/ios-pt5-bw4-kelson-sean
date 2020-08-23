@@ -77,8 +77,10 @@ class ReviewPhotosViewController: UIViewController, UINavigationControllerDelega
             self.addressLabel.text = review?.restaurant?.address
         }
         
-        if let photo = self.review?.itemPhoto {
-            //TODO load photo
+        if let photoData = self.review?.itemPhoto {
+            let image = UIImage(data: photoData)
+            self.choosePhotoButton.setImage(image, for: .normal)
+            
         }
     }
     
