@@ -64,45 +64,15 @@ class ReviewNotesViewController: UIViewController {
 
     @IBAction func saveButtonTapped(_ sender: Any) {
         self.review?.reviewNotes = self.textView.text
-        guard let reviewCreated = review,
-            let itemPhoto = reviewCreated.itemPhoto,
-            let menuItem = reviewCreated.menuItem,
-            let reviewNotes = reviewCreated.reviewNotes,
-            let restaurant = reviewCreated.restaurant,
-            let user = reviewCreated.user
-            else { return }
-        
-        controller?.createReview(overallRating: reviewCreated.overallRating,                         dirtyBathrooms: reviewCreated.dirtyBathrooms,
-                                 fineDining: reviewCreated.fineDining,
-                                 goodForDates:reviewCreated.goodForDates,
-                                 itemPhoto: itemPhoto,
-                                 menuItem: menuItem,
-                                 noKids: reviewCreated.noKids,
-                                 reviewNotes: reviewNotes,
-                                 smallSpace: reviewCreated.smallSpace, restauraunt: restaurant,
-                                 user: user)
+        controller?.saveToPersistentStore()
+ 
         self.navigationController?.popToRootViewController(animated: true)
     }
     
     @IBAction func nextButtonTapped(_ sender: Any) {
         self.review?.reviewNotes = self.textView.text
-        guard let reviewCreated = review,
-            let itemPhoto = reviewCreated.itemPhoto,
-            let menuItem = reviewCreated.menuItem,
-            let reviewNotes = reviewCreated.reviewNotes,
-            let restaurant = reviewCreated.restaurant,
-            let user = reviewCreated.user
-            else { return }
+        controller?.saveToPersistentStore()
         
-        controller?.createReview(overallRating: reviewCreated.overallRating,                         dirtyBathrooms: reviewCreated.dirtyBathrooms,
-                                 fineDining: reviewCreated.fineDining,
-                                 goodForDates:reviewCreated.goodForDates,
-                                 itemPhoto: itemPhoto,
-                                 menuItem: menuItem,
-                                 noKids: reviewCreated.noKids,
-                                 reviewNotes: reviewNotes,
-                                 smallSpace: reviewCreated.smallSpace, restauraunt: restaurant,
-                                 user: user)
         self.navigationController?.popToRootViewController(animated: true)
     }
 }
