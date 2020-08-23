@@ -27,6 +27,7 @@ class ReviewPhotosViewController: UIViewController, UINavigationControllerDelega
         super.viewDidLoad()
         
         setUpViews()
+        updateViews()
         print(restaurant?.name)
         print(review?.menuItem)
 
@@ -64,6 +65,21 @@ class ReviewPhotosViewController: UIViewController, UINavigationControllerDelega
         
         nameLabel.text = self.restaurant?.name
         addressLabel.text = self.restaurant?.address
+    }
+    
+    private func updateViews() {
+        // Update name and address
+        if let restaurant = self.restaurant {
+            nameLabel.text = restaurant.name
+            addressLabel.text = restaurant.address
+        } else {
+            self.nameLabel.text = review?.restaurant?.name
+            self.addressLabel.text = review?.restaurant?.address
+        }
+        
+        if let photo = self.review?.itemPhoto {
+            //TODO load photo
+        }
     }
     
     
