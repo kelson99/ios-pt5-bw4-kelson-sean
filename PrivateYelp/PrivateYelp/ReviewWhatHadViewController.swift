@@ -25,6 +25,7 @@ class ReviewWhatHadViewController: UIViewController {
         super.viewDidLoad()
         
         setUpViews()
+        updateViews()
     }
     
     private func setUpViews() {
@@ -56,9 +57,21 @@ class ReviewWhatHadViewController: UIViewController {
         contentView.layer.shadowRadius = 5
         contentView.layer.shadowOffset = CGSize(width: 0, height: 4)
         contentView.layer.masksToBounds = false
+    }
+    
+    private func updateViews() {
+        // Update name and address
+        if let restaurant = self.restaurant {
+            nameLabel.text = restaurant.name
+            addressLabel.text = restaurant.address
+        } else {
+            self.nameLabel.text = review?.restaurant?.name
+            self.addressLabel.text = review?.restaurant?.address
+        }
         
-        nameLabel.text = self.restaurant?.name
-        addressLabel.text = self.restaurant?.address
+        if let menuItem = self.review?.menuItem {
+            self.whatHadTextView.text = menuItem
+        }
     }
     
     @IBAction func saveButtonTapped(_ sender: Any) {
