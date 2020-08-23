@@ -193,8 +193,12 @@ class ReviewRatingChecklistViewController: UIViewController {
         guard let restaurant = restaurant else { return }
         guard let user = user else { return }
         
-        _ = Review(overallRating: Double(overallRatingValue), itemPhoto: pngData, menuItem: "", reviewNotes: "", for: restaurant, from: user)
-        controller?.saveToPersistentStore()
+        if review == nil {
+//            _ = Review(overallRating: Double(overallRatingValue), itemPhoto: pngData, menuItem: "", reviewNotes: "", for: restaurant, from: user)
+            _ = Review(overallRating: Double(overallRatingValue), dirtyBathrooms: isDirtyBathroomsSelected, fineDining: isFineDiningSelected, goodForDates: isGoodForDatesSelected, noKids: isKidsSelected, itemPhoto: pngData, menuItem: "", reviewNotes: "", smallSpace: isSmallSpaceSelected, for: restaurant, from: user)
+            controller?.saveToPersistentStore()
+        }
+        
         
         self.navigationController?.popToRootViewController(animated: true)
     }
@@ -207,9 +211,13 @@ class ReviewRatingChecklistViewController: UIViewController {
         guard let restaurant = restaurant else { return }
         guard let user = user else { return }
         
-        let reviewCreated = Review(overallRating: Double(overallRatingValue), itemPhoto: pngData, menuItem: "", reviewNotes: "", for: restaurant, from: user)
+        if review == nil {
+            let reviewCreated = Review(overallRating: Double(overallRatingValue), dirtyBathrooms: isDirtyBathroomsSelected, fineDining: isFineDiningSelected, goodForDates: isGoodForDatesSelected, noKids: isKidsSelected, itemPhoto: pngData, menuItem: "", reviewNotes: "", smallSpace: isSmallSpaceSelected, for: restaurant, from: user)
+            review = reviewCreated
+        }
+        
         controller?.saveToPersistentStore()
-        review = reviewCreated
+        
     }
     
     // MARK: - Navigation
