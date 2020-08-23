@@ -25,6 +25,7 @@ class ReviewNotesViewController: UIViewController {
         super.viewDidLoad()
 
         setUpViews()
+        updateViews()
         print(restaurant?.name)
     }
     
@@ -60,6 +61,21 @@ class ReviewNotesViewController: UIViewController {
         
         nameLabel.text = self.restaurant?.name
         addressLabel.text = self.restaurant?.address
+    }
+    
+    private func updateViews() {
+        // Update name and address
+        if let restaurant = self.restaurant {
+            nameLabel.text = restaurant.name
+            addressLabel.text = restaurant.address
+        } else {
+            self.nameLabel.text = review?.restaurant?.name
+            self.addressLabel.text = review?.restaurant?.address
+        }
+        
+        if let reviewNotes = self.review?.reviewNotes {
+            self.textView.text = self.review?.reviewNotes
+        }
     }
 
     @IBAction func saveButtonTapped(_ sender: Any) {
