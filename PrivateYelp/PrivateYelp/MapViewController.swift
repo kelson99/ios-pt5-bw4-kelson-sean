@@ -30,6 +30,7 @@ class MapViewController: UIViewController {
     var restaurantBeingPassed: Restaurant?
     var user: User?
     var controller = ModelController()
+    var googlePlaceController = GooglePlaceController()
     
     override func viewWillAppear(_ animated: Bool) {
         locationManager.requestWhenInUseAuthorization()
@@ -189,8 +190,13 @@ extension MapViewController : CLLocationManagerDelegate {
             
             if let placemark = placemarks?.first {
                 self.mostRecentPlacemark = placemark
-                NSLog("Name of placemark: \(placemark.name)")
+                NSLog("Name of placemark: \(placemark.name ?? "")")
             }
+        }
+        let latitude = String(Double(location.coordinate.latitude))
+        let longitude = String(Double(location.coordinate.longitude))
+        googlePlaceController.getNearbyPlace(latitude: latitude, longitude: longitude) { (places, error) in
+            NSLog("Place name: \(places?[1].name)")
         }
     }
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
