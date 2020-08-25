@@ -144,24 +144,45 @@ class MapViewController: UIViewController {
             let longitude = mostRecentPlacemark.location?.coordinate.longitude
             else { return }
         
-        let alertController = UIAlertController(title: "To add a new review", message: "Please enter restaurant name below", preferredStyle: .alert)
-        let continueButton = UIAlertAction(title: "Continue", style: .default) { (action) in
-            let restaurantNameTextField = alertController.textFields![0]
+        let latitudeString = String(Double(latitude))
+        let longitudeString = String(Double(longitude))
+        
+        googlePlaceController.getNearbyPlace(latitude: latitudeString, longitude: longitudeString) { (places, error) in
+            if let error = error {
+                NSLog("Error getting google place details: \(error)")
+                return
+            }
             
-            if restaurantNameTextField.text != "" {
-                let newRestaurant = Restaurant(address: address, cusineType: "", latitude: String(Double(latitude)), longitude: String(Double(longitude)), name: restaurantNameTextField.text ?? "")
-                restaurantNameTextField.endEditing(true)
+            guard let places = places else { return }
+            
+            if places.count >= 2 {
+                let restaurantName = places[1].name
+                let address = places[1].vicinity
+                
+                let newRestaurant = Restaurant(address: address, cusineType: "", latitude: String(Double(latitude)), longitude: String(Double(longitude)), name: restaurantName)
                 self.restaurantBeingPassed = newRestaurant
                 self.performSegue(withIdentifier: "AddReviewSegue", sender: self)
             }
         }
-        alertController.addTextField { (textField) in
-            textField.placeholder = "Enter Restaurant Name Here..."
-            textField.textColor = .black
-        }
-        alertController.addAction(continueButton)
-        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        self.present(alertController, animated: true, completion: nil)
+        
+//        let alertController = UIAlertController(title: "To add a new review", message: "Please enter restaurant name below", preferredStyle: .alert)
+//        let continueButton = UIAlertAction(title: "Continue", style: .default) { (action) in
+//            let restaurantNameTextField = alertController.textFields![0]
+//
+//            if restaurantNameTextField.text != "" {
+//                let newRestaurant = Restaurant(address: address, cusineType: "", latitude: String(Double(latitude)), longitude: String(Double(longitude)), name: restaurantNameTextField.text ?? "")
+//                restaurantNameTextField.endEditing(true)
+//                self.restaurantBeingPassed = newRestaurant
+//                self.performSegue(withIdentifier: "AddReviewSegue", sender: self)
+//            }
+//        }
+//        alertController.addTextField { (textField) in
+//            textField.placeholder = "Enter Restaurant Name Here..."
+//            textField.textColor = .black
+//        }
+//        alertController.addAction(continueButton)
+//        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+//        self.present(alertController, animated: true, completion: nil)
     }
 }
 
@@ -193,11 +214,11 @@ extension MapViewController : CLLocationManagerDelegate {
                 NSLog("Name of placemark: \(placemark.name ?? "")")
             }
         }
-        let latitude = String(Double(location.coordinate.latitude))
-        let longitude = String(Double(location.coordinate.longitude))
-        googlePlaceController.getNearbyPlace(latitude: latitude, longitude: longitude) { (places, error) in
-            NSLog("Place name: \(places?[1].name)")
-        }
+//        let latitude = String(Double(location.coordinate.latitude))
+//        let longitude = String(Double(location.coordinate.longitude))
+//        googlePlaceController.getNearbyPlace(latitude: latitude, longitude: longitude) { (places, error) in
+//            NSLog("Place name: \(places?[1].name)")
+//        }
     }
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         NSLog("location error: \(error)")
