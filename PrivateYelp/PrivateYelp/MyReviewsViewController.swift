@@ -13,9 +13,6 @@ class MyReviewsViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var mapButton: UIButton!
-    @IBOutlet weak var myReviewsButton: UIButton!
-    @IBOutlet weak var searchContainer: UIView!
-    @IBOutlet weak var searchTextField: UITextField!
     
     var controller: ModelController?
     var reviews: [Review] = []
@@ -59,26 +56,13 @@ class MyReviewsViewController: UIViewController {
         let nib = UINib(nibName: "ReviewTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "ReviewCell")
         
-        searchContainer.layer.cornerRadius = 10.0
-        
         //Set up shadows
-        searchContainer.layer.shadowColor = UIColor.black.cgColor
-        searchContainer.layer.shadowOpacity = 0.25
-        searchContainer.layer.shadowRadius = 5
-        searchContainer.layer.shadowOffset = CGSize(width: 0, height: 4)
-        searchContainer.layer.masksToBounds = false
         
         mapButton.layer.shadowColor = UIColor.black.cgColor
         mapButton.layer.shadowOpacity = 0.25
         mapButton.layer.shadowRadius = 5
         mapButton.layer.shadowOffset = CGSize(width: 0, height: 4)
         mapButton.layer.masksToBounds = false
-        
-        myReviewsButton.layer.shadowColor = UIColor.black.cgColor
-        myReviewsButton.layer.shadowOpacity = 0.25
-        myReviewsButton.layer.shadowRadius = 5
-        myReviewsButton.layer.shadowOffset = CGSize(width: 0, height: 4)
-        myReviewsButton.layer.masksToBounds = false
     }
     
     func loadReviews() {
