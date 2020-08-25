@@ -198,7 +198,7 @@ extension MapViewController : CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.first else { return }
         
-        let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+        let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
         let region = MKCoordinateRegion(center: location.coordinate, span: span)
         mapView.setRegion(region, animated: true)
         NSLog("location: \(location)")
@@ -213,11 +213,6 @@ extension MapViewController : CLLocationManagerDelegate {
                 self.mostRecentPlacemark = placemark
                 NSLog("Name of placemark: \(placemark.name ?? "")")
             }
-        }
-        let latitude = String(Double(location.coordinate.latitude))
-        let longitude = String(Double(location.coordinate.longitude))
-        googlePlaceController.getNearbyPlace(latitude: latitude, longitude: longitude) { (places, error) in
-            NSLog("Place name: \(places?[1].name)")
         }
     }
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
