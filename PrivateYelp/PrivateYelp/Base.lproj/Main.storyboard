@@ -44,7 +44,6 @@
                                 <state key="normal" image="mapButtonBottomBarSelected"/>
                                 <connections>
                                     <action selector="createNewReviewTapped:" destination="5GJ-P2-0Fo" eventType="touchUpInside" id="ZNQ-Le-XVL"/>
-                                    <segue destination="hPo-ha-Ng0" kind="show" identifier="AddReviewSegue" id="8SL-4R-JKZ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -65,6 +64,7 @@
                     <connections>
                         <outlet property="mapView" destination="j6O-lq-bBq" id="cJk-hh-Hl4"/>
                         <outlet property="myReviewsButton" destination="uRy-Rn-UwU" id="Zzw-JX-mLT"/>
+                        <segue destination="hPo-ha-Ng0" kind="show" identifier="AddReviewSegue" id="HSQ-p9-vEf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yIS-Pi-WT1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -205,7 +205,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="-4" translatesAutoresizingMaskIntoConstraints="NO" id="WC8-31-vnB">
                                         <rect key="frame" x="16" y="24" width="351" height="67"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PdL-bI-lOI">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PdL-bI-lOI">
                                                 <rect key="frame" x="0.0" y="0.0" width="279" height="47"/>
                                                 <fontDescription key="fontDescription" name="HKGrotesk-Bold" family="HK Grotesk" pointSize="36"/>
                                                 <color key="textColor" red="0.34901960784313724" green="0.29411764705882354" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -221,7 +221,7 @@
                                                             <constraint firstAttribute="height" constant="24" id="dbl-0F-qIq"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="un0-Rw-7la">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="751" text="Restaurant Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="un0-Rw-7la">
                                                         <rect key="frame" x="28" y="0.0" width="122.5" height="24"/>
                                                         <fontDescription key="fontDescription" name="HKGrotesk-SemiBold" family="HK Grotesk" pointSize="14"/>
                                                         <color key="textColor" red="0.21568627450980393" green="0.22352941176470587" blue="0.1803921568627451" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
@@ -515,7 +515,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="-4" translatesAutoresizingMaskIntoConstraints="NO" id="DPR-Sr-Xl7">
                                         <rect key="frame" x="16" y="24" width="351" height="67"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVp-Is-ozt">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVp-Is-ozt">
                                                 <rect key="frame" x="0.0" y="0.0" width="279" height="47"/>
                                                 <fontDescription key="fontDescription" name="HKGrotesk-Bold" family="HK Grotesk" pointSize="36"/>
                                                 <color key="textColor" red="0.34901960780000002" green="0.29411764709999999" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -640,7 +640,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="-4" translatesAutoresizingMaskIntoConstraints="NO" id="vtr-xN-psY">
                                         <rect key="frame" x="16" y="24" width="351" height="67"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hS6-RB-W6N">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hS6-RB-W6N">
                                                 <rect key="frame" x="0.0" y="0.0" width="279" height="47"/>
                                                 <fontDescription key="fontDescription" name="HKGrotesk-Bold" family="HK Grotesk" pointSize="36"/>
                                                 <color key="textColor" red="0.34901960780000002" green="0.29411764709999999" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -772,7 +772,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="-4" translatesAutoresizingMaskIntoConstraints="NO" id="6dZ-s1-gHD">
                                         <rect key="frame" x="16" y="24" width="351" height="67"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZD-6E-9Yu">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZD-6E-9Yu">
                                                 <rect key="frame" x="0.0" y="0.0" width="279" height="47"/>
                                                 <fontDescription key="fontDescription" name="HKGrotesk-Bold" family="HK Grotesk" pointSize="36"/>
                                                 <color key="textColor" red="0.34901960780000002" green="0.29411764709999999" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -884,7 +884,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="8SL-4R-JKZ"/>
+        <segue reference="HSQ-p9-vEf"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="addPhotoEmptyStateButton" width="90" height="137"/>
