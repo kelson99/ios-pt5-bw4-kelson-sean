@@ -18,7 +18,7 @@ class GooglePlaceController {
         
         let queryItems = [
             URLQueryItem(name: "location", value: "\(latitude),\(longitude)"),
-            URLQueryItem(name: "radius", value: "20"),
+            URLQueryItem(name: "radius", value: "100"),
             URLQueryItem(name: "key", value: apiKey)
         ]
         
