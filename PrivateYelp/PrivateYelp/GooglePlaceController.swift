@@ -9,10 +9,10 @@
 import Foundation
 
 class GooglePlaceController {
-    let apiKey = "AIzaSyC6N-NxvomVfOIh3L6IdPrNxqKjiStPqiY"
+    let apiKey = "AIzaSyBOCR2g9hdinpw2L4OPqdVfghaM5R22JUQ"
     let baseURL = URL(string: "https://maps.googleapis.com/maps/api/place/nearbysearch/json")!
     
-    func getNearbyPlace(latitude: String, longitude: String, completion: @escaping ([Place]?, Error?) -> Void) {
+    func getNearbyPlace(latitude: String, longitude: String, completion: @escaping ([LSIPlace]?, Error?) -> Void) {
         
         var urlComponents = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)
         
@@ -23,7 +23,6 @@ class GooglePlaceController {
         ]
         
         urlComponents?.queryItems = queryItems
-        print("URL is: \(urlComponents?.url)")
         
         guard let url = urlComponents?.url else {
             print("Error creating URL from components")
@@ -52,20 +51,25 @@ class GooglePlaceController {
             
             print(data)
             
-            do {
-                let decoder = JSONDecoder()
-                
-                let placeResults = try decoder.decode(PlaceResults.self, from: data)
-                
-                DispatchQueue.main.async {
-                    completion(placeResults.results, nil)
-                }
-                
-            } catch {
-                print("Decoding error: \(error)")
-                DispatchQueue.main.async {
-                    completion(nil, error)
-                }
+            guard let dictionary = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions(rawValue: 0)) as? [String : Any] else {
+                NSLog("error converting json to dictionary")
+                completion(nil, nil)
+                return
+            }
+            
+            guard let resultsArray = dictionary["results"] as? Array<[String: Any]> else {
+                NSLog("error getting results array")
+                completion(nil, nil)
+                return
+            }
+            
+            var allPlaces = [LSIPlace]()
+            for item in resultsArray {
+                allPlaces.append(LSIPlace(dictionary: item))
+            }
+            
+            DispatchQueue.main.async {
+                completion(allPlaces, nil)
             }
             
         }.resume()
