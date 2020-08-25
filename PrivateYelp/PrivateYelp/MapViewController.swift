@@ -214,11 +214,11 @@ extension MapViewController : CLLocationManagerDelegate {
                 NSLog("Name of placemark: \(placemark.name ?? "")")
             }
         }
-//        let latitude = String(Double(location.coordinate.latitude))
-//        let longitude = String(Double(location.coordinate.longitude))
-//        googlePlaceController.getNearbyPlace(latitude: latitude, longitude: longitude) { (places, error) in
-//            NSLog("Place name: \(places?[1].name)")
-//        }
+        let latitude = String(Double(location.coordinate.latitude))
+        let longitude = String(Double(location.coordinate.longitude))
+        googlePlaceController.getNearbyPlace(latitude: latitude, longitude: longitude) { (places, error) in
+            NSLog("Place name: \(places?[1].name)")
+        }
     }
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         NSLog("location error: \(error)")
