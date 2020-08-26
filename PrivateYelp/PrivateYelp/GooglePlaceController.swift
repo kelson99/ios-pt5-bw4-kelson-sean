@@ -9,7 +9,7 @@
 import Foundation
 
 class GooglePlaceController {
-    let apiKey = "AIzaSyBOCR2g9hdinpw2L4OPqdVfghaM5R22JUQ"
+    let apiKey = ""
     let baseURL = URL(string: "https://maps.googleapis.com/maps/api/place/nearbysearch/json")!
     
     func getNearbyPlace(latitude: String, longitude: String, completion: @escaping ([LSIPlace]?, Error?) -> Void) {
