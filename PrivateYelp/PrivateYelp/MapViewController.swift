@@ -167,27 +167,28 @@ class MapViewController: UIViewController {
                 let newRestaurant = Restaurant(address: address, cusineType: "", latitude: String(Double(latitude)), longitude: String(Double(longitude)), name: restaurantName)
                 self.restaurantBeingPassed = newRestaurant
                 self.performSegue(withIdentifier: "AddReviewSegue", sender: self)
+            } else {
+                let alertController = UIAlertController(title: "Add a new review", message: "", preferredStyle: .alert)
+                let continueButton = UIAlertAction(title: "Continue", style: .default) { (action) in
+                    let restaurantNameTextField = alertController.textFields![0]
+                
+                    if restaurantNameTextField.text != "" {
+                        let newRestaurant = Restaurant(address: address, cusineType: "", latitude: String(Double(latitude)), longitude: String(Double(longitude)), name: restaurantNameTextField.text ?? "")
+                        restaurantNameTextField.endEditing(true)
+                        self.restaurantBeingPassed = newRestaurant
+                        self.performSegue(withIdentifier: "AddReviewSegue", sender: self)
+                    }
+                }
+                
+                alertController.addTextField { (textField) in
+                    textField.placeholder = "Enter Restaurant Name Here..."
+                    textField.textColor = .black
+                }
+                alertController.addAction(continueButton)
+                alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+                self.present(alertController, animated: true, completion: nil)
             }
         }
-        
-        //        let alertController = UIAlertController(title: "To add a new review", message: "Please enter restaurant name below", preferredStyle: .alert)
-        //        let continueButton = UIAlertAction(title: "Continue", style: .default) { (action) in
-        //            let restaurantNameTextField = alertController.textFields![0]
-        //
-        //            if restaurantNameTextField.text != "" {
-        //                let newRestaurant = Restaurant(address: address, cusineType: "", latitude: String(Double(latitude)), longitude: String(Double(longitude)), name: restaurantNameTextField.text ?? "")
-        //                restaurantNameTextField.endEditing(true)
-        //                self.restaurantBeingPassed = newRestaurant
-        //                self.performSegue(withIdentifier: "AddReviewSegue", sender: self)
-        //            }
-        //        }
-        //        alertController.addTextField { (textField) in
-        //            textField.placeholder = "Enter Restaurant Name Here..."
-        //            textField.textColor = .black
-        //        }
-        //        alertController.addAction(continueButton)
-        //        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        //        self.present(alertController, animated: true, completion: nil)
     }
 }
 
