@@ -173,7 +173,7 @@ class MapViewController: UIViewController {
                 self.restaurantBeingPassed = newRestaurant
                 self.performSegue(withIdentifier: "AddReviewSegue", sender: self)
             } else {
-                let alertController = UIAlertController(title: "Add a new review", message: "", preferredStyle: .alert)
+                let alertController = UIAlertController(title: "Add a New Review", message: "", preferredStyle: .alert)
                 let continueButton = UIAlertAction(title: "Continue", style: .default) { (action) in
                     let restaurantNameTextField = alertController.textFields![0]
                 
@@ -242,6 +242,12 @@ extension MapViewController: MKMapViewDelegate {
         let button = UIButton(type: .detailDisclosure)
         
         var marker: MKMarkerAnnotationView?
+        
+        if annotation is MKUserLocation {
+            let pin = mapView.view(for: annotation) as? MKPinAnnotationView ?? MKPinAnnotationView(annotation: annotation, reuseIdentifier: nil)
+            pin.pinTintColor = UIColor.blue
+            return pin
+        }
         
         guard let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "ReviewView") as? MKMarkerAnnotationView else {
             fatalError("Incorrect Identifier")
