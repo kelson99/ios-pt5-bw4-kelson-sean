@@ -32,6 +32,7 @@ class MapViewController: UIViewController {
     var reviewPassedFromCallout: Review?
     var controller = ModelController()
     var googlePlaceController = GooglePlaceController()
+    var isRegionSet: Bool = false
     
     override func viewWillAppear(_ animated: Bool) {
         locationManager.requestWhenInUseAuthorization()
@@ -61,12 +62,16 @@ class MapViewController: UIViewController {
             loadAllRestaurants()
         }
         
-        mapView.userLocation.title = nil
-        mapView.showsUserLocation = false
-        setUpViews()
+        self.locationManager.requestWhenInUseAuthorization()
+
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.startUpdatingLocation()
+        }
         
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        mapView.userLocation.title = nil
+        setUpViews()
         
         mapView.delegate = self
         mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: "ReviewView")
@@ -80,7 +85,7 @@ class MapViewController: UIViewController {
         
         if (!appDelegate.hasAlreadyLaunched) {
             appDelegate.setHasAlreadyLaunched()
-            let alertController = UIAlertController(title: "Welcome to curator", message: "please enter your name below", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Welcome to Curator", message: "Please enter your name below", preferredStyle: .alert)
             let continueButton = UIAlertAction(title: "Continue", style: .default) { (action) in
                 let usersNameTextField = alertController.textFields![0]
                 
@@ -204,10 +209,13 @@ extension MapViewController : CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.first else { return }
         
-        let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
-        let region = MKCoordinateRegion(center: location.coordinate, span: span)
-        mapView.setRegion(region, animated: true)
-        NSLog("location: \(location)")
+        if isRegionSet == false {
+            let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+            let region = MKCoordinateRegion(center: location.coordinate, span: span)
+            mapView.setRegion(region, animated: true)
+            isRegionSet = true
+            NSLog("location: \(location)")
+        }
         
         let geocoder = CLGeocoder()
         geocoder.reverseGeocodeLocation(location) { (placemarks, error) in
