@@ -17,6 +17,7 @@
 		6611AE6624EDD6C6004ED358 /* ReviewWhatHadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6611AE6524EDD6C6004ED358 /* ReviewWhatHadViewController.swift */; };
 		6611AE6824EDD8F8004ED358 /* ReviewPhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6611AE6724EDD8F8004ED358 /* ReviewPhotosViewController.swift */; };
 		6611AE6A24EDDA95004ED358 /* ReviewNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6611AE6924EDDA95004ED358 /* ReviewNotesViewController.swift */; };
+		66D6A3F924F8274E00BEACF6 /* KeyboardLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D6A3F824F8274E00BEACF6 /* KeyboardLayoutConstraint.swift */; };
 		66DEB59324EF0D58001FA167 /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DEB59124EF0D58001FA167 /* ReviewTableViewCell.swift */; };
 		66DEB59424EF0D58001FA167 /* ReviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66DEB59224EF0D58001FA167 /* ReviewTableViewCell.xib */; };
 		66DEB59624EF14CF001FA167 /* MyReviewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DEB59524EF14CF001FA167 /* MyReviewsViewController.swift */; };
@@ -45,6 +46,7 @@
 		6611AE6524EDD6C6004ED358 /* ReviewWhatHadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewWhatHadViewController.swift; sourceTree = "<group>"; };
 		6611AE6724EDD8F8004ED358 /* ReviewPhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewPhotosViewController.swift; sourceTree = "<group>"; };
 		6611AE6924EDDA95004ED358 /* ReviewNotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewNotesViewController.swift; sourceTree = "<group>"; };
+		66D6A3F824F8274E00BEACF6 /* KeyboardLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutConstraint.swift; sourceTree = "<group>"; };
 		66DEB59124EF0D58001FA167 /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
 		66DEB59224EF0D58001FA167 /* ReviewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewTableViewCell.xib; sourceTree = "<group>"; };
 		66DEB59524EF14CF001FA167 /* MyReviewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyReviewsViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				5094617624ED98DA00C17BA7 /* ModelController.swift */,
 				50E4841424F0A021007EFDF2 /* Restaurant+MKAnnotation.swift */,
 				66DEB59B24F3FE95001FA167 /* GooglePlaceController.swift */,
+				66D6A3F824F8274E00BEACF6 /* KeyboardLayoutConstraint.swift */,
 				66DEB5A024F572F8001FA167 /* LSIPlace.h */,
 				66DEB5A124F572F8001FA167 /* LSIPlace.m */,
 				66DEB59F24F572F7001FA167 /* PrivateYelp-Bridging-Header.h */,
@@ -215,6 +218,7 @@
 				5094617124ED970900C17BA7 /* Restaurant+Convenience.swift in Sources */,
 				66F7338724ECB90B009FF9C3 /* PrivateYelp.xcdatamodeld in Sources */,
 				66DEB5A224F572F8001FA167 /* LSIPlace.m in Sources */,
+				66D6A3F924F8274E00BEACF6 /* KeyboardLayoutConstraint.swift in Sources */,
 				66F7337D24ECB90B009FF9C3 /* AppDelegate.swift in Sources */,
 				5094617524ED972600C17BA7 /* User+Convenience.swift in Sources */,
 				66DEB59C24F3FE95001FA167 /* GooglePlaceController.swift in Sources */,
