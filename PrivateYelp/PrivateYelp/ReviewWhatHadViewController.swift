@@ -26,6 +26,7 @@ class ReviewWhatHadViewController: UIViewController {
         
         setUpViews()
         updateViews()
+        whatHadTextView.delegate = self
     }
     
     private func setUpViews() {
@@ -109,5 +110,15 @@ class ReviewWhatHadViewController: UIViewController {
             destinationVC?.review = self.review
             destinationVC?.controller = self.controller
         }
+    }
+}
+
+extension ReviewWhatHadViewController: UITextViewDelegate {
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if(text == "\n") {
+            textView.resignFirstResponder()
+            return false
+        }
+        return true
     }
 }
