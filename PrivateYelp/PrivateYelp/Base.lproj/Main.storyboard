@@ -531,7 +531,7 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <color key="textColor" red="0.2156862745" green="0.22352941179999999" blue="0.18039215689999999" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HKGrotesk-SemiBold" family="HK Grotesk" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -565,14 +565,14 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="w2Z-zO-Bpu" firstAttribute="bottom" secondItem="s7h-tw-aYl" secondAttribute="bottom" constant="30" id="1aT-uL-v7R"/>
+                            <constraint firstItem="w2Z-zO-Bpu" firstAttribute="bottom" secondItem="s7h-tw-aYl" secondAttribute="bottom" constant="30" id="1aT-uL-v7R" customClass="KeyboardLayoutConstraint" customModule="PrivateYelp" customModuleProvider="target"/>
                             <constraint firstItem="0A4-oY-SC6" firstAttribute="top" secondItem="w2Z-zO-Bpu" secondAttribute="top" constant="31" id="3IW-JV-Q8I"/>
                             <constraint firstItem="0A4-oY-SC6" firstAttribute="leading" secondItem="w2Z-zO-Bpu" secondAttribute="leading" constant="16" id="9gf-tZ-V7Q"/>
                             <constraint firstItem="s7h-tw-aYl" firstAttribute="leading" secondItem="w2Z-zO-Bpu" secondAttribute="leading" constant="12" id="TI4-Gu-uq5"/>
                             <constraint firstItem="w2Z-zO-Bpu" firstAttribute="bottom" secondItem="0A4-oY-SC6" secondAttribute="bottom" constant="45" id="obK-q6-5A6"/>
                             <constraint firstItem="w2Z-zO-Bpu" firstAttribute="trailing" secondItem="NA1-xV-jLT" secondAttribute="trailing" constant="12" id="s1D-Ep-flH"/>
                             <constraint firstItem="w2Z-zO-Bpu" firstAttribute="trailing" secondItem="0A4-oY-SC6" secondAttribute="trailing" constant="15" id="vuq-Ym-Fhf"/>
-                            <constraint firstItem="w2Z-zO-Bpu" firstAttribute="bottom" secondItem="NA1-xV-jLT" secondAttribute="bottom" constant="30" id="zYE-yH-81b"/>
+                            <constraint firstItem="w2Z-zO-Bpu" firstAttribute="bottom" secondItem="NA1-xV-jLT" secondAttribute="bottom" constant="30" id="zYE-yH-81b" customClass="KeyboardLayoutConstraint" customModule="PrivateYelp" customModuleProvider="target"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="w2Z-zO-Bpu"/>
                     </view>
@@ -788,7 +788,7 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <color key="textColor" red="0.2156862745" green="0.22352941179999999" blue="0.18039215689999999" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HKGrotesk-SemiBold" family="HK Grotesk" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -822,13 +822,13 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="oPZ-ad-dPJ" firstAttribute="bottom" secondItem="b5g-Xv-Vxl" secondAttribute="bottom" constant="45" id="AoC-ug-vqo"/>
-                            <constraint firstItem="oPZ-ad-dPJ" firstAttribute="bottom" secondItem="TgU-fU-KJJ" secondAttribute="bottom" constant="30" id="DGi-89-an4"/>
+                            <constraint firstItem="oPZ-ad-dPJ" firstAttribute="bottom" secondItem="TgU-fU-KJJ" secondAttribute="bottom" constant="30" id="DGi-89-an4" customClass="KeyboardLayoutConstraint" customModule="PrivateYelp" customModuleProvider="target"/>
                             <constraint firstItem="oPZ-ad-dPJ" firstAttribute="trailing" secondItem="b5g-Xv-Vxl" secondAttribute="trailing" constant="15" id="E6I-wz-HkC"/>
                             <constraint firstItem="xZD-sb-PDV" firstAttribute="leading" secondItem="oPZ-ad-dPJ" secondAttribute="leading" constant="12" id="H8i-np-SMb"/>
                             <constraint firstItem="b5g-Xv-Vxl" firstAttribute="leading" secondItem="oPZ-ad-dPJ" secondAttribute="leading" constant="16" id="KTc-Za-fjU"/>
                             <constraint firstItem="b5g-Xv-Vxl" firstAttribute="top" secondItem="oPZ-ad-dPJ" secondAttribute="top" constant="31" id="QwE-EZ-moa"/>
                             <constraint firstItem="oPZ-ad-dPJ" firstAttribute="trailing" secondItem="TgU-fU-KJJ" secondAttribute="trailing" constant="12" id="Z0M-78-eqR"/>
-                            <constraint firstItem="oPZ-ad-dPJ" firstAttribute="bottom" secondItem="xZD-sb-PDV" secondAttribute="bottom" constant="30" id="qTo-6V-dxj"/>
+                            <constraint firstItem="oPZ-ad-dPJ" firstAttribute="bottom" secondItem="xZD-sb-PDV" secondAttribute="bottom" constant="30" id="qTo-6V-dxj" customClass="KeyboardLayoutConstraint" customModule="PrivateYelp" customModuleProvider="target"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oPZ-ad-dPJ"/>
                     </view>
