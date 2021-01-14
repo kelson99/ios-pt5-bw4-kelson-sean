@@ -1,5 +1,5 @@
 # ios-pt5-bw4-kelson-sean
-Private Yelp — Kelson &amp; Sean
+Private Yelp — Kelson &amp; Sean, this project was built with a two person team of student iOS developers to be completed in one week.
 
 <h1>Curator</h1>
 
