@@ -10,9 +10,9 @@ Private Yelp — Kelson &amp; Sean, this project was built with a two person tea
  
 <h1></h1>
  
-![makingReviewONe](https://user-images.githubusercontent.com/59428583/104633164-fce7e280-565b-11eb-886b-1a37099b8d72.gif)
+![makingReviewONe](https://user-images.githubusercontent.com/59428583/104633164-fce7e280-565b-11eb-886b-1a37099b8d72.gif) ![makingReviewTwo](https://user-images.githubusercontent.com/59428583/104633230-17ba5700-565c-11eb-8176-ca9c49b168fa.gif)
 
-![makingReviewTwo](https://user-images.githubusercontent.com/59428583/104633230-17ba5700-565c-11eb-8176-ca9c49b168fa.gif)
+
 
 ![makingReviewThree](https://user-images.githubusercontent.com/59428583/104633299-2e60ae00-565c-11eb-9cbf-d187759d8221.gif)
 
