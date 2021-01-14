@@ -4,6 +4,9 @@ Private Yelp — Kelson &amp; Sean
 <h1>Curator</h1>
 
 <h4>Curator is an app that allows the user to save their favorite restaurants or save a newly discovered restaurant while they are at the restaurant.</h4>
+
+<h4> In the next three gifs, you will see how the user can see his location using a pin on the map and be able to type in the restaurant name and have it saved
+ into a list of favorite restaurants</h4>
  
 ![makingReviewONe](https://user-images.githubusercontent.com/59428583/104633164-fce7e280-565b-11eb-886b-1a37099b8d72.gif)
 
