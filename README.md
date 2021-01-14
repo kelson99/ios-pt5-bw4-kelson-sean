@@ -16,6 +16,8 @@ Private Yelp — Kelson &amp; Sean
 
 ![makingReviewThree](https://user-images.githubusercontent.com/59428583/104633299-2e60ae00-565c-11eb-9cbf-d187759d8221.gif)
 
+<h1>Viewing your saved reviews</h4>
+
 ![openmyreviews](https://user-images.githubusercontent.com/59428583/104633114-e80b4f00-565b-11eb-88fa-4386b815bdf2.gif)
 
 ![zoomOutViewLocs](https://user-images.githubusercontent.com/59428583/104632836-82b75e00-565b-11eb-8a87-972bc1896c59.gif)
